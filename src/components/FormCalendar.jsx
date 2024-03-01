@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const FormCalendar = () => {
+const FormCalendar = ({calendarData}) => {
 
 
 
@@ -17,6 +17,8 @@ const FormCalendar = () => {
     };
 
     const isItemSelected = (e) => selectedItems.includes(e);
+
+    calendarData(selectedItems)
 
 
 

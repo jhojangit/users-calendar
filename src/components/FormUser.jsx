@@ -38,6 +38,7 @@ const FormUser = () => {
 
 
 
+
     const handleInputName = (e) => {
         setName(e.target.value)
     }
@@ -59,7 +60,11 @@ const FormUser = () => {
         setPhoneNumber(e.target.value)
     }
 
+    let calendar = []
 
+    const handleCalendar = (e) => {
+        calendar = e
+    }
 
     const handleConfirm = () => {
         const data = {
@@ -67,9 +72,14 @@ const FormUser = () => {
             facultad,
             email,
             idNumber, 
-            phoneNumber
+            phoneNumber, 
+            calendar
         }
+
     }
+
+
+
 
 
 
@@ -164,7 +174,7 @@ const FormUser = () => {
 
 
 
-                        <FormCalendar/>
+                        <FormCalendar calendarData={handleCalendar}/>
 
 
                         

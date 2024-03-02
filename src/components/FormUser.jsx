@@ -1,9 +1,14 @@
 import { useState } from "react";
 import FormCalendar from "./FormCalendar";
+import useUserStore from "../store/usesrStore";
+import { useNavigate } from "react-router-dom";
 
 
 
 const FormUser = () => {
+
+    const navigate = useNavigate()
+    const {UsersDataStore, setUsersDataStore} = useUserStore()
 
 
 
@@ -25,16 +30,14 @@ const FormUser = () => {
     }
 
 
-    const [idNumber, setIdNumber] = useState("123456789");
+    const [idNumber, setIdNumber] = useState(123456789);
     if (idNumber=="") {
         setIdNumber("123456789")
     }
 
 
-    const [phoneNumber, setPhoneNumber] = useState("313123456");
-    if (phoneNumber=="") {
-        setIdNumber("313123456")
-    }
+    const [phoneNumber, setPhoneNumber] = useState(313123456);
+
 
 
 
@@ -60,11 +63,14 @@ const FormUser = () => {
         setPhoneNumber(e.target.value)
     }
 
-    let calendar = []
 
+
+
+    let calendar = []
     const handleCalendar = (e) => {
         calendar = e
     }
+
 
     const handleConfirm = () => {
         const data = {
@@ -76,9 +82,26 @@ const FormUser = () => {
             calendar
         }
 
+        const copyData = structuredClone(UsersDataStore)   
+
+        const newData = [data, ...copyData]
+
+        setUsersDataStore(newData)
+
+        navigate("/")
     }
 
 
+    const handleDelete = () => {
+        calendar = []
+        setName("")
+        setFacultad("")
+        setIdNumber()
+        setPhoneNumber()
+
+        navigate("/")
+
+    }
 
 
 
@@ -177,16 +200,18 @@ const FormUser = () => {
                         <FormCalendar calendarData={handleCalendar}/>
 
 
+
                         
                         <div className='flex gap-2'>
                             <button
                                 onClick={handleConfirm}
-                                className="block w-full rounded-lg bg-green-600 px-5 py-3 text-sm font-medium text-white"
+                                className="block w-full rounded-lg bg-green-600 px-5 py-3 text-sm font-medium text-white hover:bg-green-500"
                             >CONFIRMAR
                             </button>
 
                             <button
-                                className="block w-full rounded-lg bg-red-600 px-5 py-3 text-sm font-medium text-white"
+                                onClick={handleDelete}
+                                className="block w-full rounded-lg bg-red-600 px-5 py-3 text-sm font-medium text-white hover:bg-red-500"
                             >
                                 BORRAR
                             </button>

@@ -11,8 +11,9 @@ function App() {
     <>
       <Routes>
           <Route path="/" element={< MainPage/>} />
-          <Route path="/users" element={< UsersPage/>} />
+          <Route path="/users/:id" element={< UsersPage/>} />
           <Route path="/form" element={< FormPage/>} />
+          <Route path="/form/:id" element={< FormPage/>} />
           <Route path="*" element={<h1>Page no found</h1>} />
       </Routes>
     </>

@@ -22,7 +22,7 @@ const UsersList = ({ users, date }) => {
 
                         <Link
                             to="/form"
-                            className='w-full text-center bg-white border-2 rounded-lg mt-3 hover:bg-green-400'
+                            className='w-full text-center bg-white border-2 rounded-lg mt-3 hover:bg-green-400 hover:text-white hover:outline-none'
                         >
                             {user.name.toUpperCase() + " - " + user.facultad.toUpperCase()}
                         </Link>

@@ -6,6 +6,8 @@ const UsersPage = () => {
 
 
   const {UsersDataStore} = useUserStore()
+
+
   const {id} = useParams()
   const usersFilter = UsersDataStore.filter(user => user.calendar.includes(id))
 

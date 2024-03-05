@@ -3,6 +3,7 @@ import './App.css'
 import MainPage from './pages/MainPage'
 import UsersPage from './pages/UsersPage'
 import FormPage from './pages/FormPage'
+import FormPageUpdate from './pages/FormPageUpdate'
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
           <Route path="/" element={< MainPage/>} />
           <Route path="/users/:id" element={< UsersPage/>} />
           <Route path="/form" element={< FormPage/>} />
-          <Route path="/form/:id" element={< FormPage/>} />
+          <Route path="/formPageUpdate/:id" element={< FormPageUpdate/>} />
           <Route path="*" element={<h1>Page no found</h1>} />
       </Routes>
     </>

@@ -1,43 +1,35 @@
 import { useState } from "react";
-import FormCalendar from "./FormCalendar";
 import useUserStore from "../store/usesrStore";
 import { useNavigate } from "react-router-dom";
+import FormCalendarUpdate from "./FormCalendarUpdate";
 
 
 
-const FormUser = () => {
+const FormUserUpdate = ({user}) => {
+
 
     const navigate = useNavigate()
     const {UsersDataStore, setUsersDataStore} = useUserStore()
 
 
 
-    const [name, setName] = useState("Nombre de usuario");
-    if (name=="") {
-        setName("Nombre de usuario")
-    }
+    const [name, setName] = useState(user.name);
 
 
-    const [facultad, setFacultad] = useState("Nombre de facultad");
-    if (facultad=="") {
-        setFacultad("Nombre de Facultad")
-    }
+
+    const [facultad, setFacultad] = useState(user.facultad);
 
 
-    const [email, setEmail] = useState("@uan.edu.co");
-    if (email=="") {
-        setEmail("@uan.edu.co")
-    }
+
+    const [email, setEmail] = useState(user.email);
+    
 
 
-    const [idNumber, setIdNumber] = useState("123456789");
-    if (idNumber=="") {
-        setIdNumber("123456789")
-    }
+    const [idNumber, setIdNumber] = useState(user?.idNumber);
+    
 
 
-    const [phoneNumber, setPhoneNumber] = useState("313123456");
-
+    const [phoneNumber, setPhoneNumber] = useState(user?.phoneNumber);
 
 
 
@@ -84,7 +76,11 @@ const FormUser = () => {
 
         const copyData = structuredClone(UsersDataStore)   
 
-        const newData = [data, ...copyData]
+        const arrSinUser = copyData.filter(users => users.phoneNumber != user.phoneNumber)
+
+        const newData = [data, ...arrSinUser]
+
+
 
         setUsersDataStore(newData)
 
@@ -99,11 +95,18 @@ const FormUser = () => {
         setIdNumber()
         setPhoneNumber()
 
+
+
+        const copyData = structuredClone(UsersDataStore)   
+
+        const arrSinUser = copyData.filter(users => users.phoneNumber != user.phoneNumber)
+
+        const newData = arrSinUser
+
+        setUsersDataStore(newData)
+
         navigate("/")
-
     }
-
-
 
 
     return (
@@ -124,7 +127,7 @@ const FormUser = () => {
                                     <input
                                         type="text"
                                         className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
-                                        placeholder={name}
+                                        placeholder={user?.name}
                                         onChange={handleInputName}
                                     />
                                 </div>
@@ -140,7 +143,7 @@ const FormUser = () => {
                                     <input
                                         type="text"
                                         className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
-                                        placeholder={facultad}
+                                        placeholder={user?.facultad}
                                         onChange={handleInputFacultad}
                                     />
                                 </div>
@@ -157,7 +160,7 @@ const FormUser = () => {
                                     <input
                                         type="text"
                                         className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
-                                        placeholder={email}
+                                        placeholder={user?.email}
                                         onChange={handleInputEmail}
                                     />
                                 </div>
@@ -170,9 +173,9 @@ const FormUser = () => {
                                 Documento de identidad
                                 <div >
                                     <input
-                                        type="text"
+                                        type="number"
                                         className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
-                                        placeholder={idNumber}
+                                        placeholder={user?.idNumber}
                                         onChange={handleInputId}
                                     />
                                 </div>
@@ -185,9 +188,9 @@ const FormUser = () => {
                                 Número de celular
                                 <div >
                                     <input
-                                        type="text"
+                                        type="number"
                                         className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
-                                        placeholder={phoneNumber}
+                                        placeholder={user?.phoneNumber}
                                         onChange={handlePhoneNumber}
                                     />
                                 </div>
@@ -197,7 +200,7 @@ const FormUser = () => {
 
 
 
-                        <FormCalendar calendarData={handleCalendar}/>
+                        <FormCalendarUpdate calendarData={handleCalendar} dataSelected={user.calendar}/>
 
 
 
@@ -227,4 +230,4 @@ const FormUser = () => {
     )
 }
 
-export default FormUser
+export default FormUserUpdate

@@ -1,7 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const UsersList = ({ users, date }) => {
+
+    const navigate = useNavigate()
+    
+
+    const handleId = (e) => {
+
+        navigate(`/formPageUpdate/${e}`)
+    }
 
 
 
@@ -19,13 +27,12 @@ const UsersList = ({ users, date }) => {
                     <div
                         className='w-full max-w-lg  flex flex-col items-center '
                         key={user.phoneNumber}>
-
-                        <Link
-                            to="/form"
-                            className='w-full text-center bg-white border-2 rounded-lg mt-3 hover:bg-green-400 hover:text-white hover:outline-none'
-                        >
+                        <h3
+                            onClick={() => handleId(user.phoneNumber)}
+                            className='cursor-pointer w-full text-center bg-white border-2 rounded-lg mt-3 hover:bg-green-400 hover:text-white hover:outline-none'>
+                        
                             {user.name.toUpperCase() + " - " + user.facultad.toUpperCase()}
-                        </Link>
+                        </h3>
 
                     </div>
                 ))

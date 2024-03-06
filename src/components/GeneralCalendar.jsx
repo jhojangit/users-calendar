@@ -101,96 +101,315 @@ const GeneralCalendar = () => {
     const [SA89, setSA89] = useState(0);
 
     useEffect(() => {
-        setLU910(UsersDataStore.filter(user => user.calendar.includes("LU-9-10")).length)
-        setMA910(UsersDataStore.filter(user => user.calendar.includes("MA-9-10")).length)
-        setMI910(UsersDataStore.filter(user => user.calendar.includes("MI-9-10")).length)
-        setJU910(UsersDataStore.filter(user => user.calendar.includes("JU-9-10")).length)
-        setVI910(UsersDataStore.filter(user => user.calendar.includes("VI-9-10")).length)
-        setSA910(UsersDataStore.filter(user => user.calendar.includes("SA-9-10")).length)
+        const allUsers = JSON.parse(localStorage.getItem("users"))
+
+        setLU910(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-9-10")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-9-10")).length
+        )
+        
+        setMA910(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-9-10")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-9-10")).length
+        )
+        setMI910(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-9-10")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-9-10")).length
+        )
+        setJU910(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-9-10")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-9-10")).length
+        )
+        setVI910(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-9-10")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-9-10")).length
+        )
+        setSA910(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-9-10")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-9-10")).length
+        )
 
 
-        setLU1011(UsersDataStore.filter(user => user.calendar.includes("LU-10-11")).length)
-        setMA1011(UsersDataStore.filter(user => user.calendar.includes("MA-10-11")).length)
-        setMI1011(UsersDataStore.filter(user => user.calendar.includes("MI-10-11")).length)
-        setJU1011(UsersDataStore.filter(user => user.calendar.includes("JU-10-11")).length)
-        setVI1011(UsersDataStore.filter(user => user.calendar.includes("VI-10-11")).length)
-        setSA1011(UsersDataStore.filter(user => user.calendar.includes("SA-10-11")).length)
+        setLU1011(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-10-11")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-10-11")).length
+        )
+        setMA1011(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-10-11")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-10-11")).length
+        )
+        setMI1011(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-10-11")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-10-11")).length
+        )
+        setJU1011(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-10-11")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-10-11")).length
+        )
+        setVI1011(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-10-11")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-10-11")).length
+        )
+        setSA1011(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-10-11")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-10-11")).length
+        )
 
 
-        setLU1112(UsersDataStore.filter(user => user.calendar.includes("LU-11-12")).length)
-        setMA1112(UsersDataStore.filter(user => user.calendar.includes("MA-11-12")).length)
-        setMI1112(UsersDataStore.filter(user => user.calendar.includes("MI-11-12")).length)
-        setJU1112(UsersDataStore.filter(user => user.calendar.includes("JU-11-12")).length)
-        setVI1112(UsersDataStore.filter(user => user.calendar.includes("VI-11-12")).length)
-        setSA1112(UsersDataStore.filter(user => user.calendar.includes("SA-11-12")).length)
+        setLU1112(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-11-12")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-11-12")).length
+        )
+        setMA1112(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-11-12")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-11-12")).length
+        )
+        setMI1112(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-11-12")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-11-12")).length
+        )
+        setJU1112(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-11-12")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-11-12")).length
+        )
+        setVI1112(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-11-12")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-11-12")).length
+        )
+        setSA1112(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-11-12")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-11-12")).length
+        )
 
 
-        setLU121(UsersDataStore.filter(user => user.calendar.includes("LU-12-1")).length)
-        setMA121(UsersDataStore.filter(user => user.calendar.includes("MA-12-1")).length)
-        setMI121(UsersDataStore.filter(user => user.calendar.includes("MI-12-1")).length)
-        setJU121(UsersDataStore.filter(user => user.calendar.includes("JU-12-1")).length)
-        setVI121(UsersDataStore.filter(user => user.calendar.includes("VI-12-1")).length)
-        setSA121(UsersDataStore.filter(user => user.calendar.includes("SA-12-1")).length)
+        setLU121(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-12-1")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-12-1")).length
+        )
+        setMA121(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-12-1")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-12-1")).length
+        )
+        setMI121(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-12-1")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-12-1")).length
+        )
+        setJU121(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-12-1")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-12-1")).length
+        )
+        setVI121(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-12-1")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-12-1")).length
+        )
+        setSA121(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-12-1")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-12-1")).length
+        )
 
 
-        setLU12(UsersDataStore.filter(user => user.calendar.includes("LU-1-2")).length)
-        setMA12(UsersDataStore.filter(user => user.calendar.includes("MA-1-2")).length)
-        setMI12(UsersDataStore.filter(user => user.calendar.includes("MI-1-2")).length)
-        setJU12(UsersDataStore.filter(user => user.calendar.includes("JU-1-2")).length)
-        setVI12(UsersDataStore.filter(user => user.calendar.includes("VI-1-2")).length)
-        setSA12(UsersDataStore.filter(user => user.calendar.includes("SA-1-2")).length)
+        setLU12(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-1-2")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-1-2")).length
+        )
+        setMA12(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-1-2")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-1-2")).length
+        )
+        setMI12(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-1-2")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-1-2")).length
+        )
+        setJU12(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-1-2")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-1-2")).length
+        )
+        setVI12(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-1-2")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-1-2")).length
+        )
+        setSA12(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-1-2")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-1-2")).length
+        )
 
 
-        setLU23(UsersDataStore.filter(user => user.calendar.includes("LU-2-3")).length)
-        setMA23(UsersDataStore.filter(user => user.calendar.includes("MA-2-3")).length)
-        setMI23(UsersDataStore.filter(user => user.calendar.includes("MI-2-3")).length)
-        setJU23(UsersDataStore.filter(user => user.calendar.includes("JU-2-3")).length)
-        setVI23(UsersDataStore.filter(user => user.calendar.includes("VI-2-3")).length)
-        setSA23(UsersDataStore.filter(user => user.calendar.includes("SA-2-3")).length)
+        setLU23(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-2-3")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-2-3")).length
+        )
+        setMA23(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-2-3")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-2-3")).length
+        )
+        setMI23(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-2-3")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-2-3")).length
+        )
+        setJU23(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-2-3")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-2-3")).length
+        )
+        setVI23(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-2-3")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-2-3")).length
+        )
+        setSA23(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-2-3")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-2-3")).length
+        )
 
 
-        setLU34(UsersDataStore.filter(user => user.calendar.includes("LU-3-4")).length)
-        setMA34(UsersDataStore.filter(user => user.calendar.includes("MA-3-4")).length)
-        setMI34(UsersDataStore.filter(user => user.calendar.includes("MI-3-4")).length)
-        setJU34(UsersDataStore.filter(user => user.calendar.includes("JU-3-4")).length)
-        setVI34(UsersDataStore.filter(user => user.calendar.includes("VI-3-4")).length)
-        setSA34(UsersDataStore.filter(user => user.calendar.includes("SA-3-4")).length)
+        setLU34(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-3-4")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-3-4")).length
+        )
+        setMA34(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-3-4")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-3-4")).length
+        )
+        setMI34(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-3-4")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-3-4")).length
+        )
+        setJU34(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-3-4")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-3-4")).length
+        )
+        setVI34(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-3-4")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-3-4")).length
+        )
+        setSA34(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-3-4")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-3-4")).length
+        )
 
 
-        setLU45(UsersDataStore.filter(user => user.calendar.includes("LU-4-5")).length)
-        setMA45(UsersDataStore.filter(user => user.calendar.includes("MA-4-5")).length)
-        setMI45(UsersDataStore.filter(user => user.calendar.includes("MI-4-5")).length)
-        setJU45(UsersDataStore.filter(user => user.calendar.includes("JU-4-5")).length)
-        setVI45(UsersDataStore.filter(user => user.calendar.includes("VI-4-5")).length)
-        setSA45(UsersDataStore.filter(user => user.calendar.includes("SA-4-5")).length)
+        setLU45(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-4-5")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-4-5")).length
+        )
+        setMA45(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-4-5")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-4-5")).length
+        )
+        setMI45(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-4-5")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-4-5")).length
+        )
+        setJU45(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-4-5")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-4-5")).length
+        )
+        setVI45(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-4-5")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-4-5")).length
+        )
+        setSA45(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-4-5")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-4-5")).length
+        )
 
-        setLU56(UsersDataStore.filter(user => user.calendar.includes("LU-5-6")).length)
-        setMA56(UsersDataStore.filter(user => user.calendar.includes("MA-5-6")).length)
-        setMI56(UsersDataStore.filter(user => user.calendar.includes("MI-5-6")).length)
-        setJU56(UsersDataStore.filter(user => user.calendar.includes("JU-5-6")).length)
-        setVI56(UsersDataStore.filter(user => user.calendar.includes("VI-5-6")).length)
-        setSA56(UsersDataStore.filter(user => user.calendar.includes("SA-5-6")).length)
+        setLU56(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-5-6")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-5-6")).length
+        )
+        setMA56(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-5-6")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-5-6")).length
+        )
+        setMI56(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-5-6")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-5-6")).length
+        )
+        setJU56(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-5-6")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-5-6")).length
+        )
+        setVI56(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-5-6")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-5-6")).length
+        )
+        setSA56(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-5-6")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-5-6")).length
+        )
 
-        setLU67(UsersDataStore.filter(user => user.calendar.includes("LU-6-7")).length)
-        setMA67(UsersDataStore.filter(user => user.calendar.includes("MA-6-7")).length)
-        setMI67(UsersDataStore.filter(user => user.calendar.includes("MI-6-7")).length)
-        setJU67(UsersDataStore.filter(user => user.calendar.includes("JU-6-7")).length)
-        setVI67(UsersDataStore.filter(user => user.calendar.includes("VI-6-7")).length)
-        setSA67(UsersDataStore.filter(user => user.calendar.includes("SA-6-7")).length)
+        setLU67(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-6-7")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-6-7")).length
+        )
+        setMA67(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-6-7")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-6-7")).length
+        )
+        setMI67(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-6-7")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-6-7")).length
+        )
+        setJU67(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-6-7")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-6-7")).length
+        )
+        setVI67(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-6-7")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-6-7")).length
+        )
+        setSA67(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-6-7")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-6-7")).length
+        )
 
-        setLU78(UsersDataStore.filter(user => user.calendar.includes("LU-7-8")).length)
-        setMA78(UsersDataStore.filter(user => user.calendar.includes("MA-7-8")).length)
-        setMI78(UsersDataStore.filter(user => user.calendar.includes("MI-7-8")).length)
-        setJU78(UsersDataStore.filter(user => user.calendar.includes("JU-7-8")).length)
-        setVI78(UsersDataStore.filter(user => user.calendar.includes("VI-7-8")).length)
-        setSA78(UsersDataStore.filter(user => user.calendar.includes("SA-7-8")).length)
+        setLU78(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-7-8")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-7-8")).length
+        )
+        setMA78(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-7-8")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-7-8")).length
+        )
+        setMI78(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-7-8")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-7-8")).length
+        )
+        setJU78(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-7-8")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-7-8")).length
+        )
+        setVI78(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-7-8")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-7-8")).length
+        )
+        setSA78(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-7-8")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-7-8")).length
+        )
 
-        setLU89(UsersDataStore.filter(user => user.calendar.includes("LU-8-9")).length)
-        setMA89(UsersDataStore.filter(user => user.calendar.includes("MA-8-9")).length)
-        setMI89(UsersDataStore.filter(user => user.calendar.includes("MI-8-9")).length)
-        setJU89(UsersDataStore.filter(user => user.calendar.includes("JU-8-9")).length)
-        setVI89(UsersDataStore.filter(user => user.calendar.includes("VI-8-9")).length)
-        setSA89(UsersDataStore.filter(user => user.calendar.includes("SA-8-9")).length)
+        setLU89(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("LU-8-9")).length :
+            UsersDataStore.filter(user => user.calendar.includes("LU-8-9")).length
+        )
+        setMA89(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MA-8-9")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MA-8-9")).length
+        )
+        setMI89(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("MI-8-9")).length :
+            UsersDataStore.filter(user => user.calendar.includes("MI-8-9")).length
+        )
+        setJU89(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("JU-8-9")).length :
+            UsersDataStore.filter(user => user.calendar.includes("JU-8-9")).length
+        )
+        setVI89(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("VI-8-9")).length :
+            UsersDataStore.filter(user => user.calendar.includes("VI-8-9")).length
+        )
+        setSA89(allUsers ? 
+            allUsers.filter( fecha => fecha.calendar.includes("SA-8-9")).length :
+            UsersDataStore.filter(user => user.calendar.includes("SA-8-9")).length
+        )
     
     }, []);
 

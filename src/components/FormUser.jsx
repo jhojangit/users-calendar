@@ -87,6 +87,7 @@ const FormUser = () => {
         const newData = [data, ...copyData]
 
         setUsersDataStore(newData)
+        localStorage.setItem("users", JSON.stringify(newData))
 
         navigate("/")
     }
@@ -213,7 +214,7 @@ const FormUser = () => {
                                 onClick={handleDelete}
                                 className="block w-full rounded-lg bg-red-600 px-5 py-3 text-sm font-medium text-white hover:bg-red-500"
                             >
-                                BORRAR
+                                CANCELAR
                             </button>
                         </div>
 

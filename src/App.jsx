@@ -4,6 +4,7 @@ import MainPage from './pages/MainPage'
 import UsersPage from './pages/UsersPage'
 import FormPage from './pages/FormPage'
 import FormPageUpdate from './pages/FormPageUpdate'
+import AllUsersPage from './pages/AllUsersPage'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/users/:id" element={< UsersPage/>} />
           <Route path="/form" element={< FormPage/>} />
           <Route path="/formPageUpdate/:id" element={< FormPageUpdate/>} />
+          <Route path="/allUsers" element={< AllUsersPage/>} />
           <Route path="*" element={<h1>Page no found</h1>} />
       </Routes>
     </>

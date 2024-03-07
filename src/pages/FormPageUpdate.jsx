@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import FormUserUpdate from '../components/FormUserUpdate'
 import useUserStore from '../store/usesrStore'
@@ -9,11 +9,18 @@ const FormPageUpdate = () => {
 
   const id = Object.values(idString)[0]
 
-  const {UsersDataStore} = useUserStore()
+  const {UsersDataStore, setUsersDataStore} = useUserStore()
 
 
+  const users = JSON.parse(localStorage.getItem("users"))
 
-  const user = UsersDataStore.filter( person =>  person.phoneNumber === id)[0]
+  useEffect(() => {
+    setUsersDataStore(users)
+  }, []);
+
+
+  const user = users.filter( person =>  person.idNumber === id)[0]
+
 
 
 

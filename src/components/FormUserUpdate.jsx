@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useUserStore from "../store/usesrStore";
 import { useNavigate } from "react-router-dom";
 import FormCalendarUpdate from "./FormCalendarUpdate";
@@ -10,6 +10,14 @@ const FormUserUpdate = ({user}) => {
 
     const navigate = useNavigate()
     const {UsersDataStore, setUsersDataStore} = useUserStore()
+
+    const users = JSON.parse(localStorage.getItem("users"))
+
+    useEffect(() => {
+        users ? setUsersDataStore(users) : ""
+
+    }, []);
+
 
 
 
@@ -64,7 +72,75 @@ const FormUserUpdate = ({user}) => {
     }
 
 
+    const [errorData, setErrorData] = useState(false);
+    const [errorDate, setErrorDate] = useState(false);
+    const [userExist, setUserExist] = useState(false);
+
+
+    const error = () => {
+        setErrorData(true)
+
+        setTimeout(() => {
+            setErrorData(false)
+        }, 4000);
+    }
+
+    const errorCalendar = () => {
+        setErrorDate(true)
+
+        setTimeout(() => {
+            setErrorDate(false)
+        }, 4000);
+    }
+
+
+
     const handleConfirm = () => {
+
+        if (name.length <= 0 || name === "Nombre de usuario") {
+            error()
+            return
+        }
+
+        if (facultad.length <= 0 || facultad === "Nombre de facultad") {
+            error()
+            return
+        }
+
+        if (email.length <= 0 || email === "@uan.edu.co") {
+            error()
+            return
+        }
+
+        if (idNumber.length <= 0 || idNumber === "123456789") {
+            error()
+            return
+        }
+
+        if (phoneNumber.length <= 0 || phoneNumber === "313123456") {
+            error()
+            return
+        }
+
+        if (calendar.length <= 0) {
+            errorCalendar()
+            return
+        }
+
+
+        const isNotUserUniq = users.find(element => element.idNumber === idNumber)
+
+        if (isNotUserUniq && idNumber != user.idNumber) {
+            setUserExist(true)
+
+            setTimeout(() => {
+                setUserExist(false)
+            }, 4000);
+
+            return
+        }
+
+
         const data = {
             name,
             facultad,
@@ -74,16 +150,20 @@ const FormUserUpdate = ({user}) => {
             calendar
         }
 
+
         const copyData = structuredClone(UsersDataStore)   
 
         const arrSinUser = copyData.filter(users => users.phoneNumber != user.phoneNumber)
 
         const newData = [data, ...arrSinUser]
 
-
-
+        
         setUsersDataStore(newData)
 
+        localStorage.clear()
+        
+        localStorage.setItem("users", JSON.stringify(newData))
+        
         navigate("/")
     }
 
@@ -105,6 +185,10 @@ const FormUserUpdate = ({user}) => {
 
         setUsersDataStore(newData)
 
+        localStorage.clear()
+        
+        localStorage.setItem("users", JSON.stringify(newData))
+
         navigate("/")
     }
 
@@ -114,7 +198,7 @@ const FormUserUpdate = ({user}) => {
 
             <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-4xl">
-                    <h1 className="text-center text-2xl font-bold text-green-500 sm:text-3xl">Selecciona tu horario</h1>
+                    <h1 className="text-center text-2xl font-bold text-green-500 sm:text-3xl">Actualiza datos</h1>
 
 
                     <div className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
@@ -204,6 +288,49 @@ const FormUserUpdate = ({user}) => {
 
 
 
+                        {
+                            errorData
+                            ?
+                            <div>
+                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                    Llena todos los campos
+                                </h3>
+                            </div>
+                            :
+
+                            ""
+                        }
+
+
+                        {
+                            errorDate
+                            ?
+                            <div>
+                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                    Agrega al menos una fecha
+                                </h3>
+                            </div>
+                            :
+
+                            ""
+                        }
+
+                        {
+                        userExist
+                            ?
+                            <div>
+                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                    Este usuario ya existe
+                                </h3>
+                            </div>
+                            :
+
+                            ""
+                        }
+
+
+
+
                         
                         <div className='flex gap-2'>
                             <button
@@ -216,7 +343,7 @@ const FormUserUpdate = ({user}) => {
                                 onClick={handleDelete}
                                 className="block w-full rounded-lg bg-red-600 px-5 py-3 text-sm font-medium text-white hover:bg-red-500"
                             >
-                                BORRAR
+                                ELIMINAR
                             </button>
                         </div>
 

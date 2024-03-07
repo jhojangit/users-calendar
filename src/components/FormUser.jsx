@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormCalendar from "./FormCalendar";
 import useUserStore from "../store/usesrStore";
 import { useNavigate } from "react-router-dom";
@@ -8,30 +8,39 @@ import { useNavigate } from "react-router-dom";
 const FormUser = () => {
 
     const navigate = useNavigate()
-    const {UsersDataStore, setUsersDataStore} = useUserStore()
+    const { UsersDataStore, setUsersDataStore } = useUserStore()
+
+
+
+    const users = JSON.parse(localStorage.getItem("users"))
+
+    useEffect(() => {
+        users ? setUsersDataStore(users) : ""
+
+    }, []);
 
 
 
     const [name, setName] = useState("Nombre de usuario");
-    if (name=="") {
+    if (name == "") {
         setName("Nombre de usuario")
     }
 
 
     const [facultad, setFacultad] = useState("Nombre de facultad");
-    if (facultad=="") {
+    if (facultad == "") {
         setFacultad("Nombre de Facultad")
     }
 
 
     const [email, setEmail] = useState("@uan.edu.co");
-    if (email=="") {
+    if (email == "") {
         setEmail("@uan.edu.co")
     }
 
 
     const [idNumber, setIdNumber] = useState("123456789");
-    if (idNumber=="") {
+    if (idNumber == "") {
         setIdNumber("123456789")
     }
 
@@ -72,17 +81,92 @@ const FormUser = () => {
     }
 
 
+
+    const [errorData, setErrorData] = useState(false);
+    const [errorDate, setErrorDate] = useState(false);
+    const [userExist, setUserExist] = useState(false);
+
+    
+
+
+    const error = () => {
+        setErrorData(true)
+
+        setTimeout(() => {
+            setErrorData(false)
+        }, 4000);
+    }
+
+    const errorCalendar = () => {
+        setErrorDate(true)
+
+        setTimeout(() => {
+            setErrorDate(false)
+        }, 4000);
+    }
+
+
+
+
+
+
     const handleConfirm = () => {
+
+        if (name.length <= 0 || name === "Nombre de usuario") {
+            error()
+            return
+        }
+
+        if (facultad.length <= 0 || facultad === "Nombre de facultad") {
+            error()
+            return
+        }
+
+        if (email.length <= 0 || email === "@uan.edu.co") {
+            error()
+            return
+        }
+
+        if (idNumber.length <= 0 || idNumber === "123456789") {
+            error()
+            return
+        }
+
+        if (phoneNumber.length <= 0 || phoneNumber === "313123456") {
+            error()
+            return
+        }
+
+        if (calendar.length <= 0) {
+            errorCalendar()
+            return
+        }
+
+
+        const isNotUserUniq = users.find(element => element.idNumber === idNumber)
+
+        if (isNotUserUniq) {
+            setUserExist(true)
+
+            setTimeout(() => {
+                setUserExist(false)
+            }, 4000);
+
+            return
+        }
+
+
+
         const data = {
             name,
             facultad,
             email,
-            idNumber, 
-            phoneNumber, 
+            idNumber,
+            phoneNumber,
             calendar
         }
 
-        const copyData = structuredClone(UsersDataStore)   
+        const copyData = structuredClone(UsersDataStore)
 
         const newData = [data, ...copyData]
 
@@ -93,7 +177,7 @@ const FormUser = () => {
     }
 
 
-    const handleDelete = () => {
+    const handleCancel = () => {
         calendar = []
         setName("")
         setFacultad("")
@@ -198,11 +282,53 @@ const FormUser = () => {
 
 
 
-                        <FormCalendar calendarData={handleCalendar}/>
+                        <FormCalendar calendarData={handleCalendar} />
+
+                        {
+                            errorData
+                            ?
+                            <div>
+                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                    Llena todos los campos
+                                </h3>
+                            </div>
+                            :
+
+                            ""
+                        }
+
+
+                        {
+                            errorDate
+                            ?
+                            <div>
+                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                    Agrega al menos una fecha
+                                </h3>
+                            </div>
+                            :
+
+                            ""
+                        }
+
+
+                        {
+                            userExist
+                            ?
+                            <div>
+                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                    Este usuario ya existe
+                                </h3>
+                            </div>
+                            :
+
+                            ""
+                        }
 
 
 
-                        
+
+
                         <div className='flex gap-2'>
                             <button
                                 onClick={handleConfirm}
@@ -211,7 +337,7 @@ const FormUser = () => {
                             </button>
 
                             <button
-                                onClick={handleDelete}
+                                onClick={handleCancel}
                                 className="block w-full rounded-lg bg-red-600 px-5 py-3 text-sm font-medium text-white hover:bg-red-500"
                             >
                                 CANCELAR

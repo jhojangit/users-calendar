@@ -28,7 +28,7 @@ const UsersList = ({ users, date }) => {
                         className='w-full max-w-lg  flex flex-col items-center '
                         key={user.phoneNumber}>
                         <h3
-                            onClick={() => handleId(user.phoneNumber)}
+                            onClick={() => handleId(user.idNumber)}
                             className='cursor-pointer w-full text-center bg-white border-2 rounded-lg mt-3 hover:bg-green-400 hover:text-white hover:outline-none'>
                         
                             {user.name.toUpperCase() + " - " + user.facultad.toUpperCase()}

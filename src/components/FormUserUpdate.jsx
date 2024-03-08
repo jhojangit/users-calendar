@@ -198,20 +198,20 @@ const FormUserUpdate = ({user}) => {
 
             <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-4xl">
-                    <h1 className="text-center text-2xl font-bold text-green-500 sm:text-3xl">Actualiza datos</h1>
+                    <h1 className="text-center text-2xl font-bold text-slate-200 sm:text-3xl">Actualiza datos</h1>
 
 
                     <div className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
 
 
                         <div>
-                            <label className="text-slate-400 ml-4">
+                            <label className="text-slate-300 ml-4 font-bold">
                                 Nombre
                                 <div >
                                     <input
                                         type="text"
-                                        className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
-                                        placeholder={user?.name}
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        placeholder={user.name}
                                         onChange={handleInputName}
                                     />
                                 </div>
@@ -221,13 +221,13 @@ const FormUserUpdate = ({user}) => {
 
 
                         <div>
-                            <label className="text-slate-400 ml-4">
+                            <label className="text-slate-300 ml-4 font-bold">
                                 Facultad
                                 <div >
                                     <input
                                         type="text"
-                                        className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
-                                        placeholder={user?.facultad}
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        placeholder={user.facultad}
                                         onChange={handleInputFacultad}
                                     />
                                 </div>
@@ -238,13 +238,13 @@ const FormUserUpdate = ({user}) => {
 
 
                         <div>
-                            <label className="text-slate-400 ml-4">
+                            <label className="text-slate-300 ml-4 font-bold">
                                 Correo institucional
                                 <div >
                                     <input
                                         type="text"
-                                        className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
-                                        placeholder={user?.email}
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        placeholder={user.email}
                                         onChange={handleInputEmail}
                                     />
                                 </div>
@@ -253,13 +253,13 @@ const FormUserUpdate = ({user}) => {
 
 
                         <div>
-                            <label className="text-slate-400 ml-4">
+                            <label className="text-slate-300 ml-4 font-bold">
                                 Documento de identidad
                                 <div >
                                     <input
-                                        type="number"
-                                        className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
-                                        placeholder={user?.idNumber}
+                                        type="text"
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        placeholder={user.idNumber}
                                         onChange={handleInputId}
                                     />
                                 </div>
@@ -268,13 +268,13 @@ const FormUserUpdate = ({user}) => {
 
 
                         <div>
-                            <label className="text-slate-400 ml-4">
+                            <label className="text-slate-300 ml-4 font-bold">
                                 Número de celular
                                 <div >
                                     <input
-                                        type="number"
-                                        className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
-                                        placeholder={user?.phoneNumber}
+                                        type="text"
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        placeholder={user.phoneNumber}
                                         onChange={handlePhoneNumber}
                                     />
                                 </div>

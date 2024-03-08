@@ -14,7 +14,7 @@ const MainPage = () => {
 
 
     return (
-        <div className='font-labrada w-full flex flex-col '>
+        <div className='font-labrada w-full min-h-screen h-full pb-5 flex flex-col bg-slate-900 '>
 
             <TitleMain/>
             <GeneralCalendar/>

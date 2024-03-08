@@ -196,19 +196,19 @@ const FormUser = () => {
 
             <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-4xl">
-                    <h1 className="text-center text-2xl font-bold text-green-500 sm:text-3xl">Selecciona tu horario</h1>
+                    <h1 className="text-center text-2xl font-bold text-slate-200 sm:text-3xl">Selecciona tu horario</h1>
 
 
                     <div className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
 
 
                         <div>
-                            <label className="text-slate-400 ml-4">
+                            <label className="text-slate-300 ml-4 font-bold">
                                 Nombre
                                 <div >
                                     <input
                                         type="text"
-                                        className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
                                         placeholder={name}
                                         onChange={handleInputName}
                                     />
@@ -219,12 +219,12 @@ const FormUser = () => {
 
 
                         <div>
-                            <label className="text-slate-400 ml-4">
+                            <label className="text-slate-300 ml-4 font-bold">
                                 Facultad
                                 <div >
                                     <input
                                         type="text"
-                                        className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
                                         placeholder={facultad}
                                         onChange={handleInputFacultad}
                                     />
@@ -236,12 +236,12 @@ const FormUser = () => {
 
 
                         <div>
-                            <label className="text-slate-400 ml-4">
+                            <label className="text-slate-300 ml-4 font-bold">
                                 Correo institucional
                                 <div >
                                     <input
                                         type="text"
-                                        className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
                                         placeholder={email}
                                         onChange={handleInputEmail}
                                     />
@@ -251,12 +251,12 @@ const FormUser = () => {
 
 
                         <div>
-                            <label className="text-slate-400 ml-4">
+                            <label className="text-slate-300 ml-4 font-bold">
                                 Documento de identidad
                                 <div >
                                     <input
                                         type="text"
-                                        className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
                                         placeholder={idNumber}
                                         onChange={handleInputId}
                                     />
@@ -266,12 +266,12 @@ const FormUser = () => {
 
 
                         <div>
-                            <label className="text-slate-400 ml-4">
+                            <label className="text-slate-300 ml-4 font-bold">
                                 Número de celular
                                 <div >
                                     <input
                                         type="text"
-                                        className="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
                                         placeholder={phoneNumber}
                                         onChange={handlePhoneNumber}
                                     />

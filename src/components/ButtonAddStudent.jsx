@@ -16,19 +16,19 @@ const ButtonAddStudent = () => {
             
             >
             <a
-                className="cursor-pointer group flex items-center justify-between gap-4 rounded-lg border border-green-600 bg-green-600 px-5 py-3 transition-colors hover:bg-transparent focus:outline-none focus:ring"
+                className="cursor-pointer group flex items-center justify-between gap-4 rounded-lg border border-cyan-100 bg-cyan-100 px-5 py-3 transition-colors hover:bg-slate-100 focus:outline-none focus:ring"
                 onClick={handleAddUser}
             >
 
 
                 <span
-                    className="font-medium text-white transition-colors group-hover:text-green-600 group-active:text-green-600">
-                    Agregar estudiante
+                    className="font-bold text-slate-600 transition-colors group-hover:text-slate-800">
+                    Agregar usuario
                 </span>
 
 
                 <span
-                    className="shrink-0 rounded-full border border-current bg-white p-2 text-green-600 group-active:text-green-600">
+                    className="shrink-0 rounded-full border border-current bg-transparent p-2 text-cyan-800">
                     <svg
                         className="size-5 rtl:rotate-180"
                         xmlns="http://www.w3.org/2000/svg"

@@ -25,7 +25,7 @@ const FormPageUpdate = () => {
 
 
   return (
-    <div className='w-full font-labrada'>
+    <div className='w-full h-full font-labrada bg-slate-900'>
       <FormUserUpdate user={user}/>
     </div>
   )

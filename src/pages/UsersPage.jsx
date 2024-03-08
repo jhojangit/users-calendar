@@ -30,7 +30,7 @@ const UsersPage = () => {
 
 
   return (
-    <div>
+    <div className='min-h-screen h-full bg-slate-900 text-slate-200'>
 
         <UsersList 
           users={usersSort}

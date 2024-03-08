@@ -15,9 +15,9 @@ const UsersList = ({ users, date }) => {
 
 
     return (
-        <section className='w-11/12 m-auto h-screen flex flex-col pt-10 items-center border-2'>
+        <section className='w-full m-auto h-screen flex flex-col pt-10 items-center'>
 
-            <h1>
+            <h1  className='font-bold text-lg'>
                 {date}
             </h1>
 
@@ -29,7 +29,7 @@ const UsersList = ({ users, date }) => {
                         key={user.phoneNumber}>
                         <h3
                             onClick={() => handleId(user.idNumber)}
-                            className='cursor-pointer w-full text-center bg-white border-2 rounded-lg mt-3 hover:bg-green-400 hover:text-white hover:outline-none'>
+                            className='cursor-pointer w-full font-bold text-slate-700 text-center bg-white border-none rounded-lg mt-3 hover:bg-slate-600 hover:text-white hover:outline-none transition'>
                         
                             {user.name.toUpperCase() + " - " + user.facultad.toUpperCase()}
                         </h3>

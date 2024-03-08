@@ -12,7 +12,7 @@ const AllUsersPage = () => {
 
 
     return (
-        <div>
+        <div className='w-full m-auto h-screen flex flex-col pt-10 items-center min-h-screen  bg-slate-900 text-slate-200'>
 
             <UsersList
                 users={usersSort}

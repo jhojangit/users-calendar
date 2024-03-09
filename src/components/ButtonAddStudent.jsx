@@ -12,7 +12,7 @@ const ButtonAddStudent = () => {
 
     return (
         <div 
-            className='w-1/6 m-auto mt-10'
+            className='w-60 m-auto mt-10'
             
             >
             <a

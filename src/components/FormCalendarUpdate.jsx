@@ -27,7 +27,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
             <div className="overflow-x-auto max-w-screen-lg m-auto mt-5">
             <table className="min-w-full bg-slate-600 text-sm rounded-md">
 
-                <thead className="ltr:text-left rtl:text-right">
+                <thead className="ltr:text-left rtl:text-right border">
                         <tr>
                             <th className="whitespace-nowrap px-4 py-2 font-medium text-slate-200">LUNES</th>
                             <th className="whitespace-nowrap px-4 py-2 font-medium text-slate-200">MARTES</th>
@@ -41,12 +41,12 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
 
                     <tbody >
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-9-10")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-9-10") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-9-10") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 9 - 10
                             </td>
@@ -55,7 +55,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-9-10")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-9-10") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-9-10") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 9 - 10
                             </td>
@@ -64,7 +64,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-9-10")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-9-10") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-9-10") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 9 - 10
                             </td>
@@ -73,7 +73,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-9-10")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-9-10") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-9-10") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 9 - 10
                             </td>
@@ -82,7 +82,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-9-10")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-9-10") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-9-10") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 9 - 10
                             </td>
@@ -91,19 +91,19 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-9-10")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-9-10") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-9-10") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 9 - 10
                             </td>
                         </tr>
 
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-10-11")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-10-11") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-10-11") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 10 - 11
                             </td>
@@ -112,7 +112,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-10-11")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-10-11") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-10-11") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 10 - 11
                             </td>
@@ -121,7 +121,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-10-11")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-10-11") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-10-11") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 10 - 11
                             </td>
@@ -130,7 +130,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-10-11")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-10-11") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-10-11") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 10 - 11
                             </td>
@@ -139,7 +139,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-10-11")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-10-11") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-10-11") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 10 - 11
                             </td>
@@ -148,7 +148,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-10-11")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-10-11") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-10-11") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 10 - 11
                             </td>
@@ -156,12 +156,12 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                         </tr>
 
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-11-12")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-11-12") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-11-12") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 11 - 12
                             </td>
@@ -170,7 +170,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-11-12")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-11-12") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-11-12") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 11 - 12
                             </td>
@@ -179,7 +179,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-11-12")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-11-12") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-11-12") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 11 - 12
                             </td>
@@ -188,7 +188,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-11-12")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-11-12") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-11-12") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 11 - 12
                             </td>
@@ -197,7 +197,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-11-12")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-11-12") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-11-12") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 11 - 12
                             </td>
@@ -206,19 +206,19 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-11-12")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-11-12") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-11-12") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 11 - 12
                             </td>
 
                         </tr>
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-12-1")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-12-1") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-12-1") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 12 - 1
                             </td>
@@ -227,7 +227,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-12-1")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-12-1") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-12-1") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 12 - 1
                             </td>
@@ -236,7 +236,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-12-1")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-12-1") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-12-1") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 12 - 1
                             </td>
@@ -245,7 +245,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-12-1")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-12-1") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-12-1") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 12 - 1
                             </td>
@@ -254,7 +254,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-12-1")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-12-1") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-12-1") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 12 - 1
                             </td>
@@ -263,7 +263,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-12-1")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-12-1") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-12-1") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 12 - 1
                             </td>
@@ -271,12 +271,12 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                         </tr>
 
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-1-2")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-1-2") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-1-2") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 1 - 2
                             </td>
@@ -285,7 +285,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-1-2")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-1-2") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-1-2") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 1 - 2
                             </td>
@@ -294,7 +294,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-1-2")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-1-2") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-1-2") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 1 - 2
                             </td>
@@ -303,7 +303,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-1-2")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-1-2") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-1-2") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 1 - 2
                             </td>
@@ -312,7 +312,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-1-2")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-1-2") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-1-2") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 1 - 2
                             </td>
@@ -321,7 +321,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-1-2")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-1-2") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-1-2") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 1 - 2
                             </td>
@@ -329,12 +329,12 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                         </tr>
 
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-2-3")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-2-3") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-2-3") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 2 - 3
                             </td>
@@ -343,7 +343,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-2-3")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-2-3") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-2-3") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 2 - 3
                             </td>
@@ -352,7 +352,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-2-3")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-2-3") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-2-3") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 2 - 3
                             </td>
@@ -361,7 +361,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-2-3")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-2-3") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-2-3") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 2 - 3
                             </td>
@@ -370,7 +370,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-2-3")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-2-3") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-2-3") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 2 - 3
                             </td>
@@ -379,7 +379,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-2-3")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-2-3") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-2-3") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 2 - 3
                             </td>
@@ -387,12 +387,12 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                         </tr>
 
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-3-4")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-3-4") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-3-4") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 3 - 4
                             </td>
@@ -401,7 +401,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-3-4")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-3-4") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-3-4") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 3 - 4
                             </td>
@@ -410,7 +410,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-3-4")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-3-4") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-3-4") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 3 - 4
                             </td>
@@ -419,7 +419,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-3-4")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-3-4") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-3-4") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 3 - 4
                             </td>
@@ -428,7 +428,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-3-4")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-3-4") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-3-4") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 3 - 4
                             </td>
@@ -437,7 +437,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-3-4")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-3-4") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-3-4") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 3 - 4
                             </td>
@@ -445,12 +445,12 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                         </tr>
 
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-4-5")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-4-5") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-4-5") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 4 - 5
                             </td>
@@ -459,7 +459,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-4-5")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-4-5") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-4-5") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 4 - 5
                             </td>
@@ -468,7 +468,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-4-5")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-4-5") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-4-5") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 4 - 5
                             </td>
@@ -477,7 +477,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-4-5")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-4-5") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-4-5") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 4 - 5
                             </td>
@@ -486,7 +486,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-4-5")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-4-5") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-4-5") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 4 - 5
                             </td>
@@ -495,7 +495,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-4-5")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-4-5") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-4-5") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 4 - 5
                             </td>
@@ -503,12 +503,12 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                         </tr>
 
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-5-6")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-5-6") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-5-6") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 5 - 6
                             </td>
@@ -517,7 +517,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-5-6")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-5-6") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-5-6") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 5 - 6
                             </td>
@@ -526,7 +526,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-5-6")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-5-6") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-5-6") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 5 - 6
                             </td>
@@ -535,7 +535,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-5-6")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-5-6") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-5-6") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 5 - 6
                             </td>
@@ -544,7 +544,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-5-6")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-5-6") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-5-6") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 5 - 6
                             </td>
@@ -553,7 +553,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-5-6")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-5-6") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-5-6") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 5 - 6
                             </td>
@@ -561,12 +561,12 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                         </tr>
 
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-6-7")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-6-7") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-6-7") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 6 - 7
                             </td>
@@ -575,7 +575,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-6-7")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-6-7") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-6-7") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 6 - 7
                             </td>
@@ -584,7 +584,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-6-7")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-6-7") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-6-7") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 6 - 7
                             </td>
@@ -593,7 +593,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-6-7")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-6-7") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-6-7") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 6 - 7
                             </td>
@@ -602,7 +602,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-6-7")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-6-7") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-6-7") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 6 - 7
                             </td>
@@ -611,19 +611,19 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-6-7")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-6-7") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-6-7") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 6 - 7
                             </td>
 
                         </tr>
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-7-8")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-7-8") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-7-8") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 7 - 8
                             </td>
@@ -632,7 +632,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-7-8")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-7-8") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-7-8") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 7 - 8
                             </td>
@@ -641,7 +641,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-7-8")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-7-8") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-7-8") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 7 - 8
                             </td>
@@ -650,7 +650,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-7-8")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-7-8") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-7-8") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 7 - 8
                             </td>
@@ -659,7 +659,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-7-8")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-7-8") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-7-8") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 7 - 8
                             </td>
@@ -668,7 +668,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-7-8")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-7-8") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-7-8") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 7 - 8
                             </td>
@@ -676,12 +676,12 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                         </tr>
 
 
-                        <tr className="odd:bg-slate-500 text-center">
+                        <tr className="odd:bg-slate-500 text-center border">
                             <td 
                                 onClick={() => dataSelection("LU-8-9")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("LU-8-9") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("LU-8-9") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 8 - 9
                             </td>
@@ -690,7 +690,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MA-8-9")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MA-8-9") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MA-8-9") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 8 - 9
                             </td>
@@ -699,7 +699,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("MI-8-9")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("MI-8-9") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("MI-8-9") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 8 - 9
                             </td>
@@ -708,7 +708,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("JU-8-9")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("JU-8-9") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("JU-8-9") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 8 - 9
                             </td>
@@ -717,7 +717,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("VI-8-9")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("VI-8-9") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("VI-8-9") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 8 - 9
                             </td>
@@ -726,7 +726,7 @@ const FormCalendarUpdate = ({calendarData, dataSelected}) => {
                                 onClick={() => dataSelection("SA-8-9")}
                                 className={`whitespace-nowrap px-4 py-2 text-gray-700 cursor-pointer 
                                 ${
-                                    isItemSelected("SA-8-9") ? 'bg-cyan-100 text-slate-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
+                                    isItemSelected("SA-8-9") ? 'bg-cyan-100 text-orange-600 font-bold' : ' text-slate-100 hover:bg-slate-400 hover:text-slate-100'
                                 }`}>
                                 8 - 9
                             </td>

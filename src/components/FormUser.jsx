@@ -143,7 +143,10 @@ const FormUser = () => {
         }
 
 
+
+
         const isNotUserUniq = users.find(element => element.idNumber === idNumber)
+
 
         if (isNotUserUniq) {
             setUserExist(true)
@@ -151,10 +154,8 @@ const FormUser = () => {
             setTimeout(() => {
                 setUserExist(false)
             }, 4000);
-
             return
         }
-
 
 
         const data = {

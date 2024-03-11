@@ -145,7 +145,7 @@ const FormUser = () => {
 
 
 
-        const isNotUserUniq = users.find(element => element.idNumber === idNumber)
+        const isNotUserUniq = users && users.find(element => element.idNumber === idNumber)
 
 
         if (isNotUserUniq) {

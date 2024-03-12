@@ -5,11 +5,11 @@ import FormCalendarUpdate from "./FormCalendarUpdate";
 
 
 
-const FormUserUpdate = ({user}) => {
+const FormUserUpdate = ({ user }) => {
 
 
     const navigate = useNavigate()
-    const {UsersDataStore, setUsersDataStore} = useUserStore()
+    const { UsersDataStore, setUsersDataStore } = useUserStore()
 
     const users = JSON.parse(localStorage.getItem("users"))
 
@@ -30,11 +30,11 @@ const FormUserUpdate = ({user}) => {
 
 
     const [email, setEmail] = useState(user.email);
-    
+
 
 
     const [idNumber, setIdNumber] = useState(user?.idNumber);
-    
+
 
 
     const [phoneNumber, setPhoneNumber] = useState(user?.phoneNumber);
@@ -145,30 +145,39 @@ const FormUserUpdate = ({user}) => {
             name,
             facultad,
             email,
-            idNumber, 
-            phoneNumber, 
+            idNumber,
+            phoneNumber,
             calendar
         }
 
 
-        const copyData = structuredClone(UsersDataStore)   
+        const copyData = structuredClone(UsersDataStore)
 
         const arrSinUser = copyData.filter(users => users.phoneNumber != user.phoneNumber)
 
         const newData = [data, ...arrSinUser]
 
-        
+
         setUsersDataStore(newData)
 
         localStorage.clear()
-        
+
         localStorage.setItem("users", JSON.stringify(newData))
-        
+
         navigate("/")
     }
 
 
-    const handleDelete = () => {
+    const [confirmDelete, setConfirmDelete] = useState(false);
+
+
+
+
+    const handleDelete = () =>{
+        setConfirmDelete(true)
+    } 
+
+    const handleConfirmDelete = () =>{
         calendar = []
         setName("")
         setFacultad("")
@@ -177,7 +186,7 @@ const FormUserUpdate = ({user}) => {
 
 
 
-        const copyData = structuredClone(UsersDataStore)   
+        const copyData = structuredClone(UsersDataStore)
 
         const arrSinUser = copyData.filter(users => users.phoneNumber != user.phoneNumber)
 
@@ -186,12 +195,23 @@ const FormUserUpdate = ({user}) => {
         setUsersDataStore(newData)
 
         localStorage.clear()
-        
+
         localStorage.setItem("users", JSON.stringify(newData))
 
         navigate("/")
-    }
+        setConfirmDelete(false)
+    } 
 
+    const handleNotConfirmDelete = () =>{
+        setConfirmDelete(false)
+        return
+    } 
+
+
+
+    const handleReturn = () => {
+        navigate(-1)
+    }
 
     return (
         <>
@@ -200,6 +220,13 @@ const FormUserUpdate = ({user}) => {
                 <div className="mx-auto max-w-4xl">
                     <h1 className="text-center text-2xl font-bold text-slate-200 sm:text-3xl">Actualiza datos</h1>
 
+                    <div className='absolute top-5 left-5'>
+                        <button
+                            onClick={handleReturn}
+                            className='bg-blue-700 text-slate-50 p-2 rounded-lg hover:bg-blue-600'>
+                            Regresar
+                        </button>
+                    </div>
 
                     <div className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
 
@@ -284,54 +311,79 @@ const FormUserUpdate = ({user}) => {
 
 
 
-                        <FormCalendarUpdate calendarData={handleCalendar} dataSelected={user.calendar}/>
+                        <FormCalendarUpdate calendarData={handleCalendar} dataSelected={user.calendar} />
 
 
 
                         {
                             errorData
-                            ?
-                            <div>
-                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
-                                    Llena todos los campos
-                                </h3>
-                            </div>
-                            :
+                                ?
+                                <div>
+                                    <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                        Llena todos los campos
+                                    </h3>
+                                </div>
+                                :
 
-                            ""
+                                ""
                         }
 
 
                         {
                             errorDate
-                            ?
-                            <div>
-                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
-                                    Agrega al menos una fecha
-                                </h3>
-                            </div>
-                            :
+                                ?
+                                <div>
+                                    <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                        Agrega al menos una fecha
+                                    </h3>
+                                </div>
+                                :
 
-                            ""
+                                ""
                         }
 
                         {
-                        userExist
-                            ?
-                            <div>
-                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
-                                    Este usuario ya existe
-                                </h3>
-                            </div>
-                            :
+                            userExist
+                                ?
+                                <div>
+                                    <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                        Este usuario ya existe
+                                    </h3>
+                                </div>
+                                :
 
-                            ""
+                                ""
+                        }
+
+
+
+                        {
+                            confirmDelete
+                                ?
+                                <div className='text-center bg-slate-700 p-3 rounded-lg text-slate-50'>
+                                    <p className='text-2xl pb-5 '>
+                                        Confirma que desas borrar este usuario
+                                    </p>
+                                    <button
+                                        onClick={handleNotConfirmDelete}
+                                        className='bg-teal-600 p-2 rounded-lg hover:bg-teal-400 mr-2'>
+                                        No borrar
+                                    </button>
+
+                                    <button
+                                        onClick={handleConfirmDelete}
+                                        className='bg-red-500 p-2 rounded-lg hover:bg-red-400 ml-2'>
+                                        Borrar usuario
+                                    </button>
+                                </div>
+                                :
+                                ""
                         }
 
 
 
 
-                        
+
                         <div className='flex gap-2'>
                             <button
                                 onClick={handleConfirm}

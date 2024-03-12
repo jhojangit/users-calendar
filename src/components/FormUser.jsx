@@ -86,7 +86,7 @@ const FormUser = () => {
     const [errorDate, setErrorDate] = useState(false);
     const [userExist, setUserExist] = useState(false);
 
-    
+
 
 
     const error = () => {
@@ -190,7 +190,9 @@ const FormUser = () => {
     }
 
 
-
+    const handleReturn = () => {
+        navigate(-1)
+    }
 
     return (
         <>
@@ -198,6 +200,15 @@ const FormUser = () => {
             <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-4xl">
                     <h1 className="text-center text-2xl font-bold text-slate-200 sm:text-3xl">Selecciona tu horario</h1>
+
+
+                    <div className='absolute top-5 left-5'>
+                        <button
+                            onClick={handleReturn}
+                            className='bg-blue-700 text-slate-50 p-2 rounded-lg hover:bg-blue-600'>
+                            Regresar
+                        </button>
+                    </div>
 
 
                     <div className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
@@ -287,43 +298,43 @@ const FormUser = () => {
 
                         {
                             errorData
-                            ?
-                            <div>
-                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
-                                    Llena todos los campos
-                                </h3>
-                            </div>
-                            :
+                                ?
+                                <div>
+                                    <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                        Llena todos los campos
+                                    </h3>
+                                </div>
+                                :
 
-                            ""
+                                ""
                         }
 
 
                         {
                             errorDate
-                            ?
-                            <div>
-                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
-                                    Agrega al menos una fecha
-                                </h3>
-                            </div>
-                            :
+                                ?
+                                <div>
+                                    <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                        Agrega al menos una fecha
+                                    </h3>
+                                </div>
+                                :
 
-                            ""
+                                ""
                         }
 
 
                         {
                             userExist
-                            ?
-                            <div>
-                                <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
-                                    Este usuario ya existe
-                                </h3>
-                            </div>
-                            :
+                                ?
+                                <div>
+                                    <h3 className="w-full bg-red-500 text-slate-50 text-center text-xl rounded-lg">
+                                        Este usuario ya existe
+                                    </h3>
+                                </div>
+                                :
 
-                            ""
+                                ""
                         }
 
 

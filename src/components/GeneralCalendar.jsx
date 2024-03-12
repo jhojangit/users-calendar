@@ -422,9 +422,9 @@ const GeneralCalendar = () => {
     return (
         <div>
             <div className="overflow-x-auto max-w-screen-lg m-auto mt-5">
-                <table className="min-w-full bg-slate-600 text-sm rounded-md">
+                <table className="min-w-full bg-slate-600 text-sm rounded-lg ">
 
-                    <thead className="ltr:text-left rtl:text-right border">
+                    <thead className="ltr:text-left rtl:text-right border ">
                         <tr>
                             <th className="whitespace-nowrap px-4 py-2 font-medium text-slate-200">LUNES</th>
                             <th className="whitespace-nowrap px-4 py-2 font-medium text-slate-200">MARTES</th>

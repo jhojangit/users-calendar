@@ -32,6 +32,8 @@ const FormUserUpdate = ({ user }) => {
     const [email, setEmail] = useState(user.email);
 
 
+    const [tipoDocumento, setTipoDocumento] = useState(user.tipoDocumento);
+
 
     const [idNumber, setIdNumber] = useState(user?.idNumber);
 
@@ -54,6 +56,11 @@ const FormUserUpdate = ({ user }) => {
     const handleInputEmail = (e) => {
         setEmail(e.target.value)
     }
+
+    function handleSelectId(e) {
+        setTipoDocumento(e.target.value);
+    }
+
 
     const handleInputId = (e) => {
         setIdNumber(e.target.value)
@@ -112,6 +119,11 @@ const FormUserUpdate = ({ user }) => {
             return
         }
 
+        if (tipoDocumento.length <= 0 || idNumber === "") {
+            error()
+            return
+        }
+
         if (idNumber.length <= 0 || idNumber === "123456789") {
             error()
             return
@@ -145,6 +157,7 @@ const FormUserUpdate = ({ user }) => {
             name,
             facultad,
             email,
+            tipoDocumento,
             idNumber,
             phoneNumber,
             calendar
@@ -281,6 +294,28 @@ const FormUserUpdate = ({ user }) => {
 
                         <div>
                             <label className="text-slate-300 ml-4 font-bold">
+                                Tipo de documento
+                                <div>
+                                    <select
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 text-sm"
+                                        value={tipoDocumento}
+                                        onChange={handleSelectId}
+                                    >
+                                        <option value="">Seleccione un tipo</option>
+                                        <option value="CC">CC</option>
+                                        <option value="TARJETA-IDENTIDAD">TARJETA DE IDENTIDAD</option>
+                                        <option value="PASAPORTE">PASAPORTE</option>
+                                        <option value="OTRO">OTRO</option>
+                                    </select>
+                                </div>
+                            </label>
+                        </div>
+
+
+
+
+                        <div>
+                            <label className="text-slate-300 ml-4 font-bold">
                                 Documento de identidad
                                 <div >
                                     <input
@@ -362,7 +397,7 @@ const FormUserUpdate = ({ user }) => {
                                 ?
                                 <div className='text-center bg-slate-700 p-3 rounded-lg text-slate-50'>
                                     <p className='text-2xl pb-5 '>
-                                        Confirma que desas borrar este usuario
+                                        ¿Desas borrar este usuario?
                                     </p>
                                     <button
                                         onClick={handleNotConfirmDelete}

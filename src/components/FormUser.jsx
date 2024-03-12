@@ -38,6 +38,8 @@ const FormUser = () => {
         setEmail("@uan.edu.co")
     }
 
+    const [tipoDocumento, setTipoDocumento] = useState('');
+
 
     const [idNumber, setIdNumber] = useState("123456789");
     if (idNumber == "") {
@@ -62,6 +64,11 @@ const FormUser = () => {
 
     const handleInputEmail = (e) => {
         setEmail(e.target.value)
+    }
+
+
+    function handleSelectId(e) {
+        setTipoDocumento(e.target.value);
     }
 
     const handleInputId = (e) => {
@@ -127,6 +134,11 @@ const FormUser = () => {
             return
         }
 
+        if (tipoDocumento.length <= 0 || idNumber === "") {
+            error()
+            return
+        }
+
         if (idNumber.length <= 0 || idNumber === "123456789") {
             error()
             return
@@ -162,6 +174,7 @@ const FormUser = () => {
             name,
             facultad,
             email,
+            tipoDocumento,
             idNumber,
             phoneNumber,
             calendar
@@ -257,6 +270,26 @@ const FormUser = () => {
                                         placeholder={email}
                                         onChange={handleInputEmail}
                                     />
+                                </div>
+                            </label>
+                        </div>
+
+
+                        <div>
+                            <label className="text-slate-300 ml-4 font-bold">
+                                Tipo de documento
+                                <div>
+                                    <select
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 text-sm"
+                                        value={tipoDocumento}
+                                        onChange={handleSelectId}
+                                    >
+                                        <option value="">Seleccione un tipo</option>
+                                        <option value="CC">CC</option>
+                                        <option value="TARJETA-IDENTIDAD">TARJETA DE IDENTIDAD</option>
+                                        <option value="PASAPORTE">PASAPORTE</option>
+                                        <option value="OTRO">OTRO</option>
+                                    </select>
                                 </div>
                             </label>
                         </div>

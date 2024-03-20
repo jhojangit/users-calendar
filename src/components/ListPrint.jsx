@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import DataTable from 'react-data-table-component';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -48,7 +49,10 @@ const ListPrint = ({ users }) => {
         link.click();
     }
 
-    const Export = ({ onExport }) => <h2 onClick={e => onExport(e.target.value)}>Export</h2>;
+    const Export = ({ onExport }) => <button 
+            className='bg-slate-500 text-white p-2 rounded-lg hover:bg-slate-400 absolute top-0 right-5 text-xl'
+            onClick={e => onExport(e.target.value)}>Exportar
+        </button>;
 
 	const actionsMemo = React.useMemo(() => <Export onExport={() => downloadCSV(users)} />, []);
 
@@ -86,18 +90,22 @@ const ListPrint = ({ users }) => {
     ]
 
 
+    const navigate = useNavigate()
 
-
-
+    const handleReturn = () =>{
+        navigate(-1)
+    } 
 
     return (
-        <section className='w-full m-auto h-screen flex flex-col pt-10 items-center'>
+        <section className='w-full m-auto h-screen flex flex-col items-center '>
 
-            <h1  className='font-bold text-lg'>
-                Universidad Antonio Nariño
-            </h1>
-
-
+            <div className='absolute top-10 z-10 left-5'>
+                <button
+                    onClick={handleReturn}
+                    className='bg-blue-700 p-2 rounded-lg hover:bg-blue-600 text-white'>
+                    Regresar
+                </button>
+            </div>
 
 
             <DataTable

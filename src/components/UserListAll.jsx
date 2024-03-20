@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const UsersListAll = ({ users, title }) => {
 
@@ -12,7 +12,6 @@ const UsersListAll = ({ users, title }) => {
     }
 
     const [confirmDelete, setConfirmDelete] = useState(false);
-
 
 
 
@@ -80,6 +79,14 @@ const UsersListAll = ({ users, title }) => {
                     className='bg-blue-700 p-2 rounded-lg hover:bg-blue-600'>
                     Regresar
                 </button>
+            </div>
+
+
+            <div className='absolute top-7 left-50'>
+                <Link className="bg-green-700 p-2 rounded-lg hover:bg-green-600"
+                    to={"/ListPrintPage"}>
+                    📃 
+                </Link>
             </div>
 
             {

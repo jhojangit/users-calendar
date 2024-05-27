@@ -3,13 +3,20 @@ import TitleMain from '../components/TitleMain'
 import GeneralCalendar from '../components/GeneralCalendar'
 import ButtonAddStudent from '../components/ButtonAddStudent'
 import ButtonAllUsers from '../components/ButtonAllUsers'
+import ImportJson from '../components/ImportJson'
 
 const MainPage = () => {
 
 
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        });
+    }, []);
+
+    
     const users = JSON.parse(localStorage.getItem("users"))
-
-
 
 
 
@@ -20,7 +27,9 @@ const MainPage = () => {
             <GeneralCalendar/>
             <ButtonAddStudent/>
 
+
             {users && users.length !== 0 && <ButtonAllUsers />}
+            <ImportJson/>
 
         </div>
 

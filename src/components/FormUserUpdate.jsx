@@ -15,7 +15,10 @@ const FormUserUpdate = ({ user }) => {
 
     useEffect(() => {
         users ? setUsersDataStore(users) : ""
-
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        });
     }, []);
 
 

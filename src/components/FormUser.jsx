@@ -17,6 +17,11 @@ const FormUser = () => {
     useEffect(() => {
         users ? setUsersDataStore(users) : ""
 
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        });
+
     }, []);
 
 
@@ -54,16 +59,16 @@ const FormUser = () => {
 
 
     const handleInputName = (e) => {
-        setName(e.target.value)
+        setName(e.target.value.trim())
     }
 
     const handleInputFacultad = (e) => {
-        setFacultad(e.target.value)
+        setFacultad(e.target.value.trim())
     }
 
 
     const handleInputEmail = (e) => {
-        setEmail(e.target.value)
+        setEmail(e.target.value.trim())
     }
 
 
@@ -72,11 +77,11 @@ const FormUser = () => {
     }
 
     const handleInputId = (e) => {
-        setIdNumber(e.target.value)
+        setIdNumber(e.target.value.trim())
     }
 
     const handlePhoneNumber = (e) => {
-        setPhoneNumber(e.target.value)
+        setPhoneNumber(e.target.value.trim())
     }
 
 

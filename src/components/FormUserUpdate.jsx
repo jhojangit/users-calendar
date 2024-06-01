@@ -27,6 +27,8 @@ const FormUserUpdate = ({ user }) => {
     const [name, setName] = useState(user.name);
 
 
+    const [sede, setSede] = useState(user.sede);
+
 
     const [facultad, setFacultad] = useState(user.facultad);
 
@@ -49,6 +51,10 @@ const FormUserUpdate = ({ user }) => {
 
     const handleInputName = (e) => {
         setName(e.target.value)
+    }
+
+    function handleSede(e) {
+        setSede(e.target.value);
     }
 
     const handleInputFacultad = (e) => {
@@ -112,6 +118,11 @@ const FormUserUpdate = ({ user }) => {
             return
         }
 
+        if (sede.length <= 0 || sede === "") {
+            error()
+            return
+        }
+
         if (facultad.length <= 0 || facultad === "Nombre de facultad") {
             error()
             return
@@ -158,6 +169,7 @@ const FormUserUpdate = ({ user }) => {
 
         const data = {
             name,
+            sede,
             facultad,
             email,
             tipoDocumento,
@@ -196,6 +208,7 @@ const FormUserUpdate = ({ user }) => {
     const handleConfirmDelete = () =>{
         calendar = []
         setName("")
+        setSede("")
         setFacultad("")
         setIdNumber()
         setPhoneNumber()
@@ -257,6 +270,26 @@ const FormUserUpdate = ({ user }) => {
                                         placeholder={user.name}
                                         onChange={handleInputName}
                                     />
+                                </div>
+                            </label>
+                        </div>
+
+
+                        <div>
+                            <label className="text-slate-300 ml-4 font-bold">
+                                Sede
+                                <div>
+                                    <select
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 text-sm"
+                                        value={sede}
+                                        onChange={handleSede}
+                                    >
+                                        <option value="">Seleccione su sede</option>
+                                        <option value="IBÉRICA">IBÉRICA</option>
+                                        <option value="SUR">SUR</option>
+                                        <option value="CIRCUNVALAR">CIRCUNVALAR</option>
+                                        <option value="FEDERMÁN">FEDERMÁN</option>
+                                    </select>
                                 </div>
                             </label>
                         </div>

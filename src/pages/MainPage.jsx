@@ -15,7 +15,7 @@ const MainPage = () => {
         });
     }, []);
 
-    
+
     const users = JSON.parse(localStorage.getItem("users"))
 
 
@@ -23,7 +23,7 @@ const MainPage = () => {
     return (
         <div className='font-labrada w-full min-h-screen h-full pb-5 flex flex-col bg-slate-900 '>
 
-            <TitleMain/>
+           {/* <TitleMain/> */}
             <GeneralCalendar/>
             <ButtonAddStudent/>
 

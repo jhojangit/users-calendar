@@ -11,6 +11,19 @@ const UsersList = ({ users, date }) => {
     }, []);
 
     const navigate = useNavigate()
+
+
+    const sortBySede = (a, b) => {
+        if (a.sede < b.sede) {
+            return -1;
+        }
+        if (a.sede > b.sede) {
+            return 1;
+        }
+        return 0;
+    };
+
+    users = users.sort(sortBySede);
     
 
     const handleId = (e) => {
@@ -54,7 +67,7 @@ const UsersList = ({ users, date }) => {
                             onClick={() => handleId(user.idNumber)}
                             className='cursor-pointer w-full font-bold text-slate-700 text-center bg-white border-none rounded-md mt-3 hover:bg-slate-400 hover:text-white hover:outline-none transition'>
                         
-                            {user.name.toUpperCase() + " - " + user.facultad.toUpperCase()}
+                            {user.sede.toUpperCase() + " - " + user.name.toUpperCase()  }
                         </h3>
 
                     </div>

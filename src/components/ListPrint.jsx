@@ -67,6 +67,13 @@ const ListPrint = ({ users }) => {
     const actionsMemo = React.useMemo(() => <Export onExport={() => downloadCSV(users)} />, []);
 
     const columns = [
+
+        {
+            name: "Sede",
+            selector: row => row.sede,
+            sortable: true
+        },
+
         {
             name: "Nombre",
             selector: row => row.name,
@@ -116,7 +123,7 @@ const ListPrint = ({ users }) => {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'datos.json';
+        a.download = 'usuarios.json';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);

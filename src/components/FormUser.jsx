@@ -31,6 +31,7 @@ const FormUser = () => {
         setName("Nombre de usuario")
     }
 
+    const [sede, setSede] = useState('');
 
     const [facultad, setFacultad] = useState("Nombre de facultad");
     if (facultad == "") {
@@ -61,6 +62,11 @@ const FormUser = () => {
     const handleInputName = (e) => {
         setName(e.target.value.trim())
     }
+    
+    function handleSelectSede(e) {
+        setSede(e.target.value);
+    }
+
 
     const handleInputFacultad = (e) => {
         setFacultad(e.target.value.trim())
@@ -129,6 +135,11 @@ const FormUser = () => {
             return
         }
 
+        if (sede.length <= 0 || sede === "") {
+            error()
+            return
+        }
+
         if (facultad.length <= 0 || facultad === "Nombre de facultad") {
             error()
             return
@@ -177,6 +188,7 @@ const FormUser = () => {
 
         const data = {
             name,
+            sede,
             facultad,
             email,
             tipoDocumento,
@@ -199,11 +211,14 @@ const FormUser = () => {
     const handleCancel = () => {
         calendar = []
         setName("")
+        setSede("")
         setFacultad("")
         setIdNumber()
         setPhoneNumber()
 
         navigate("/")
+
+        location.reload()
 
     }
 
@@ -242,6 +257,27 @@ const FormUser = () => {
                                         placeholder={name}
                                         onChange={handleInputName}
                                     />
+                                </div>
+                            </label>
+                        </div>
+
+
+
+                        <div>
+                            <label className="text-slate-300 ml-4 font-bold">
+                                Sede
+                                <div>
+                                    <select
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 text-sm"
+                                        value={sede}
+                                        onChange={handleSelectSede}
+                                    >
+                                        <option value="">Seleccione su sede</option>
+                                        <option value="IBÉRICA">IBÉRICA</option>
+                                        <option value="SUR">SUR</option>
+                                        <option value="CIRCUNVALAR">CIRCUNVALAR</option>
+                                        <option value="FEDERMÁN">FEDERMÁN</option>
+                                    </select>
                                 </div>
                             </label>
                         </div>

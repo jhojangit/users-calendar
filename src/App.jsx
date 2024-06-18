@@ -13,6 +13,7 @@ function App() {
   return (
 
     <>
+
       <Routes>
           <Route path="/" element={< MainPage/>} />
           <Route path="/users/:id" element={< UsersPage/>} />
@@ -22,6 +23,7 @@ function App() {
           <Route path="/listPrintPage" element={< ListPrintPage/>} />
           <Route path="*" element={<h1>Page no found</h1>} />
       </Routes>
+
     </>
 
   )

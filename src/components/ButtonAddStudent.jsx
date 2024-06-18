@@ -12,7 +12,7 @@ const ButtonAddStudent = () => {
 
     return (
         <div 
-            className='w-60 m-auto mt-10'
+            className='w-60 m-auto mt-10 text-center'
             
             >
             <a
@@ -20,31 +20,11 @@ const ButtonAddStudent = () => {
                 onClick={handleAddUser}
             >
 
-
                 <span
-                    className="font-bold text-slate-600 transition-colors group-hover:text-slate-800">
-                    Agregar usuario
+                    className="font-bold  text-slate-600 transition-colors group-hover:text-slate-800">
+                    AGREGAR USUARIO
                 </span>
 
-
-                <span
-                    className="shrink-0 rounded-full border border-current bg-transparent p-2 text-cyan-800">
-                    <svg
-                        className="size-5 rtl:rotate-180"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                    </svg>
-                </span>
             </a>
 
 

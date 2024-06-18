@@ -40,13 +40,13 @@ const ImportJson = () => {
             <h1
                 className='text-slate-200 text-lg'
                 >
-                Importar datos
+                IMPORTAR DATOS
             </h1>
             <input
                 type="file" 
                 accept=".json" 
                 onChange={handleImportJson} 
-                className="cursor-pointer group flex items-center justify-between gap-4 rounded-lg border border-cyan-100 bg-cyan-100 px-5 py-3 transition-colors hover:bg-slate-100 focus:outline-none focus:ring"
+                className="w-auto p-10 cursor-pointer group flex items-center justify-between gap-4 rounded-lg border border-cyan-100 bg-cyan-100 px-5 py-3 transition-colors hover:bg-slate-100 focus:outline-none focus:ring"
             />
         </div>
     )

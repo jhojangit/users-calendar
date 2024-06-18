@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const UsersList = ({ users, date }) => {
@@ -13,17 +13,32 @@ const UsersList = ({ users, date }) => {
     const navigate = useNavigate()
 
 
-    const sortBySede = (a, b) => {
-        if (a.sede < b.sede) {
-            return -1;
-        }
-        if (a.sede > b.sede) {
-            return 1;
-        }
-        return 0;
+    const [filterUsers, setFilterUsers] = useState(users);
+
+    const handleFilter = (value) => {
+
+        const newArray = users.filter( user => user.sede === value)
+        setFilterUsers(newArray);
     };
 
-    users = users.sort(sortBySede);
+
+    const [activeButton, setActiveButton] = useState(null);
+
+    const [amountSelection, setAmountSelection] = useState("");
+
+    const handleClick = (value) => {
+        setAmountSelection(value)
+
+        if (amountSelection === value) {
+            setFilterUsers(users)
+            setActiveButton("");
+            setAmountSelection("")
+        }else{
+            setActiveButton(value);
+
+            handleFilter(value)
+        }
+    };
     
 
     const handleId = (e) => {
@@ -44,7 +59,7 @@ const UsersList = ({ users, date }) => {
             </h1>
 
             <strong>
-                {users.length + " " + "inscritos"}
+                {filterUsers.length + " " + "inscritos"}
             </strong>
 
 
@@ -57,9 +72,48 @@ const UsersList = ({ users, date }) => {
                 </button>
             </div>
 
+
+            <section className='flex gap-4 justify-center pt-8 pb-4'>
+                <button
+                    className={`text-slate-50 p-2 font-bold rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "IBÉRICA" ? 'bg-slate-200 text-slate-700' : 'bg-slate-500'}`}
+                    type="button"
+                    value="IBÉRICA"
+                    onClick={() => handleClick("IBÉRICA")}
+                >
+                    Ibérica
+                </button>
+
+                <button
+                    className={`text-slate-50 p-2 font-bold rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "SUR" ? 'bg-slate-200 text-slate-700' : 'bg-slate-500'}`}
+                    type="button"
+                    value="SUR"
+                    onClick={() => handleClick("SUR")}
+                >
+                    Sur
+                </button>
+
+                <button
+                    className={`text-slate-50 p-2 font-bold rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "CIRCUNVALAR" ? 'bg-slate-200 text-slate-700' : 'bg-slate-500'}`}
+                    type="button"
+                    value="CIRCUNVALAR"
+                    onClick={() => handleClick("CIRCUNVALAR")}
+                >
+                    Circunvalar
+                </button>
+
+                <button
+                    className={`text-slate-50 p-2 font-bold rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "FEDERMÁN" ? 'bg-slate-200 text-slate-700' : 'bg-slate-500'}`}
+                    type="button"
+                    value="FEDERMÁN"
+                    onClick={() => handleClick("FEDERMÁN")}
+                >
+                    Federmán
+                </button>
+            </section>
+
             {
 
-                users.map(user => (
+                filterUsers.map(user => (
                     <div
                         className='w-full max-w-lg  flex flex-col items-center '
                         key={user.phoneNumber}>
@@ -67,7 +121,7 @@ const UsersList = ({ users, date }) => {
                             onClick={() => handleId(user.idNumber)}
                             className='cursor-pointer w-full font-bold text-slate-700 text-center bg-white border-none rounded-md mt-3 hover:bg-slate-400 hover:text-white hover:outline-none transition'>
                         
-                            {user.sede.toUpperCase() + " - " + user.name.toUpperCase()  }
+                            {user.facultad.toUpperCase() + " - " + user.name.toUpperCase()  }
                         </h3>
 
                     </div>

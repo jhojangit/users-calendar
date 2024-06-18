@@ -10,5 +10,7 @@ export default {
         labrada: ['Labrada'],
     },},
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }

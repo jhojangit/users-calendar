@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import useUserStore from '../store/usesrStore'
 import { useEffect, useState } from 'react'
-import { useStore } from 'zustand'
 
 
 
@@ -450,12 +449,17 @@ const GeneralCalendar = () => {
         handleFilter(value);
     };
 
+
+    
+
+
+
     return (
         <div>
 
             <section className='flex gap-4 justify-center pt-8'>
                 <button
-                    className={`text-slate-50 p-2 rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "IBÉRICA" ? 'bg-blue-200 text-slate-700' : 'bg-slate-500'}`}
+                    className={`text-slate-50 font-bold p-2 rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "IBÉRICA" ? 'bg-slate-200 text-slate-700' : 'bg-slate-500'}`}
                     type="button"
                     value="IBÉRICA"
                     onClick={() => handleClick("IBÉRICA")}
@@ -464,7 +468,7 @@ const GeneralCalendar = () => {
                 </button>
 
                 <button
-                    className={`text-slate-50 p-2 rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "SUR" ? 'bg-blue-200 text-slate-700' : 'bg-slate-500'}`}
+                    className={`text-slate-50 font-bold p-2 rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "SUR" ? 'bg-slate-200 text-slate-700' : 'bg-slate-500'}`}
                     type="button"
                     value="SUR"
                     onClick={() => handleClick("SUR")}
@@ -473,7 +477,7 @@ const GeneralCalendar = () => {
                 </button>
 
                 <button
-                    className={`text-slate-50 p-2 rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "CIRCUNVALAR" ? 'bg-blue-200 text-slate-700' : 'bg-slate-500'}`}
+                    className={`text-slate-50 font-bold p-2 rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "CIRCUNVALAR" ? 'bg-slate-200 text-slate-700' : 'bg-slate-500'}`}
                     type="button"
                     value="CIRCUNVALAR"
                     onClick={() => handleClick("CIRCUNVALAR")}
@@ -482,7 +486,7 @@ const GeneralCalendar = () => {
                 </button>
 
                 <button
-                    className={`text-slate-50 p-2 rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "FEDERMÁN" ? 'bg-blue-200 text-slate-700' : 'bg-slate-500'}`}
+                    className={`text-slate-50 font-bold p-2 rounded-md hover:bg-slate-200 hover:text-slate-600 ${activeButton === "FEDERMÁN" ? 'bg-slate-200 text-slate-700' : 'bg-slate-500'}`}
                     type="button"
                     value="FEDERMÁN"
                     onClick={() => handleClick("FEDERMÁN")}

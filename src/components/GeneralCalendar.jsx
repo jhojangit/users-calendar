@@ -464,7 +464,7 @@ const GeneralCalendar = () => {
                     value="IBÉRICA"
                     onClick={() => handleClick("IBÉRICA")}
                 >
-                    Ibéricaa
+                    Ibérica
                 </button>
 
                 <button

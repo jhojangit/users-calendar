@@ -450,9 +450,6 @@ const GeneralCalendar = () => {
     };
 
 
-    
-
-
 
     return (
         <div>

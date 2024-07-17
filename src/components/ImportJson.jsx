@@ -17,9 +17,18 @@ const ImportJson = () => {
 
                 const newObject = [...objetoJSON, ...amountLocalStorage] //Combina los datos actuales y los importados
 
+                let usuariosUnicos = {}
+
+                newObject.forEach(newObject => {
+                    usuariosUnicos[newObject.idNumber] = newObject; //Envia usuarios únicos 
+                });
+
+                const nuevoArrayUsuariosUnicos = Object.values(usuariosUnicos);
+                
+
                 localStorage.clear()       // Borra el local storage
     
-                localStorage.setItem("users", JSON.stringify(newObject)) // pone los nuevos valores en localstorage
+                localStorage.setItem("users", JSON.stringify(nuevoArrayUsuariosUnicos)) // pone los nuevos valores en localstorage
                 
                 location.reload(); // recarga la pag
                 

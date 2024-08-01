@@ -128,6 +128,7 @@ const ListPrint = ({ users }) => {
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
+        console.log("sisaaaaaa");
     };
 
 

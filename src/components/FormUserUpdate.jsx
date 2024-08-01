@@ -27,6 +27,9 @@ const FormUserUpdate = ({ user }) => {
     const [name, setName] = useState(user.name);
 
 
+    const [instrument, setInstrument] = useState(user.instrument);
+
+
     const [sede, setSede] = useState(user.sede);
 
 
@@ -51,6 +54,10 @@ const FormUserUpdate = ({ user }) => {
 
     const handleInputName = (e) => {
         setName(e.target.value)
+    }
+
+    const handleInputInstrument = (e) => {
+        setInstrument(e.target.value)
     }
 
     function handleSede(e) {
@@ -118,6 +125,11 @@ const FormUserUpdate = ({ user }) => {
             return
         }
 
+        if (instrument.length <= 0 || name === "Instrumento") {
+            error()
+            return
+        }
+
         if (sede.length <= 0 || sede === "") {
             error()
             return
@@ -169,6 +181,7 @@ const FormUserUpdate = ({ user }) => {
 
         const data = {
             name,
+            instrument,
             sede,
             facultad,
             email,
@@ -208,6 +221,7 @@ const FormUserUpdate = ({ user }) => {
     const handleConfirmDelete = () =>{
         calendar = []
         setName("")
+        setInstrument("")
         setSede("")
         setFacultad("")
         setIdNumber()
@@ -269,6 +283,21 @@ const FormUserUpdate = ({ user }) => {
                                         className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
                                         placeholder={user.name}
                                         onChange={handleInputName}
+                                    />
+                                </div>
+                            </label>
+                        </div>
+
+
+                        <div>
+                            <label className="text-slate-300 ml-4 font-bold">
+                                Instrumento
+                                <div >
+                                    <input
+                                        type="text"
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        placeholder={user.instrument}
+                                        onChange={handleInputInstrument}
                                     />
                                 </div>
                             </label>

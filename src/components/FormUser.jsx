@@ -31,6 +31,11 @@ const FormUser = () => {
         setName("Nombre de usuario")
     }
 
+    const [instrument, setInstrument] = useState("Instrumento");
+    if (instrument == "") {
+        setInstrument("Instrumento")
+    }
+
     const [sede, setSede] = useState('');
 
     const [facultad, setFacultad] = useState("Nombre de facultad");
@@ -63,6 +68,10 @@ const FormUser = () => {
         setName(e.target.value.trim())
     }
     
+    const handleInputInstrument = (e) => {
+        setInstrument(e.target.value.trim())
+    }
+
     function handleSelectSede(e) {
         setSede(e.target.value);
     }
@@ -135,6 +144,11 @@ const FormUser = () => {
             return
         }
 
+        if (instrument.length <= 0 || name === "Instrumento") {
+            error()
+            return
+        }
+
         if (sede.length <= 0 || sede === "") {
             error()
             return
@@ -188,6 +202,7 @@ const FormUser = () => {
 
         const data = {
             name,
+            instrument,
             sede,
             facultad,
             email,
@@ -211,6 +226,7 @@ const FormUser = () => {
     const handleCancel = () => {
         calendar = []
         setName("")
+        setInstrument("")
         setSede("")
         setFacultad("")
         setIdNumber()
@@ -261,6 +277,20 @@ const FormUser = () => {
                             </label>
                         </div>
 
+
+                        <div>
+                            <label className="text-slate-300 ml-4 font-bold">
+                                Instrumento
+                                <div >
+                                    <input
+                                        type="text"
+                                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm"
+                                        placeholder={instrument}
+                                        onChange={handleInputInstrument}
+                                    />
+                                </div>
+                            </label>
+                        </div>
 
 
                         <div>

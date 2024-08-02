@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import DataTable from 'react-data-table-component';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -119,6 +121,7 @@ const ListPrint = ({ users }) => {
     const objetoJSON = JSON.stringify(users)
 
     const guardarJSON = () => {
+        toastNotification()
         const blob = new Blob([objetoJSON], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -127,15 +130,29 @@ const ListPrint = ({ users }) => {
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        console.log("sisaaaaaa");
+        URL.revokeObjectURL(url); 
     };
+
+    const toastNotification = () => {
+        toast('Revisa tu carpeta de descargas', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+
+    }
 
 
 
     return (
         <section className='w-full m-auto h-screen flex flex-col items-center z-0'>
 
+                <ToastContainer/>
             <div className='absolute top-10 z-10 left-5'>
                 <button
                     onClick={handleReturn}
@@ -160,6 +177,8 @@ const ListPrint = ({ users }) => {
                 actions={actionsMemo}
                 >
             </DataTable>
+
+
         </section>
     )
 }

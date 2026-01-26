@@ -10,10 +10,14 @@ const ImportJson = () => {
 
     // Función para desencriptar el contenido del archivo
     const desencriptarContenido = (contenido, claveSecreta) => {
-        const bytes = CryptoJS.AES.decrypt(contenido, claveSecreta);
-        const textoDesencriptado = bytes.toString(CryptoJS.enc.Utf8);
-        if (!textoDesencriptado) throw new Error('Desencriptado vacío: clave incorrecta o archivo corrupto');
-        return textoDesencriptado;
+        try {
+            const bytes = CryptoJS.AES.decrypt(contenido, claveSecreta);
+            const textoDesencriptado = bytes.toString(CryptoJS.enc.Utf8);
+            if (!textoDesencriptado) throw new Error('Desencriptado vacío: clave incorrecta o archivo corrupto');
+            return textoDesencriptado;
+        } catch (err) {
+            throw new Error(`Error en desencriptación: ${err.message}`);
+        }
     };
 
     const handleImportJson = async (event) => {
@@ -21,7 +25,12 @@ const ImportJson = () => {
         if (!archivo) return;
 
         try {
-            const contenido = await archivo.text();
+            // Leer archivo como ArrayBuffer primero
+            const arrayBuffer = await archivo.arrayBuffer();
+            const uint8Array = new Uint8Array(arrayBuffer);
+            const contenido = Array.from(uint8Array)
+                .map(byte => String.fromCharCode(byte))
+                .join('');
 
             // Desencriptar el contenido del archivo JSON
             const claveSecreta = import.meta.env.VITE_PASSWORDENCRIPT;
@@ -69,7 +78,7 @@ const ImportJson = () => {
             setMenuCourse(true);
             setMenuSede(true);
             console.error('Error al leer el archivo:', error);
-            alert('Error al leer el archivo:', error);
+            alert(`Error al leer el archivo: ${error.message}`);
         }
     };
 

@@ -9,7 +9,6 @@ import useUserStore from '../store/usesrStore';
 
 const ListPrint = ({ users, allUsers }) => {
 
-    const authRead = sessionStorage.getItem("authRead")
     const authWrite = sessionStorage.getItem("authWrite")
 
     const [showExportOptions, setShowExportOptions] = useState(false);

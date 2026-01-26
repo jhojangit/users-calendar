@@ -1,0 +1,6 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "dist"
+
+[env.production]
+  environment = {VITE_PASSWORDENCRIPT = "2222", VITE_PASSWORD_READ = "1111", VITE_PASSWORD_WRITE = "0000"}

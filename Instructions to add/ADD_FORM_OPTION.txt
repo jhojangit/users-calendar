@@ -1,4 +1,4 @@
-Para agregar una nueva opción en el formulario
+Para agregar una nueva opción en el formulario.
 
 1. Dirigirse a src/components/FormUser.jsx
 

@@ -1,0 +1,15 @@
+Para agregar sede solo se requiere modificar un archivo.
+
+1. Entrar a src
+2. Entrar a constants
+3. Entrar a sedes.js
+4. Agregar el nombre de la sede al Array "ARRAY_OF_SEDES"
+
+export const ARRAY_OF_SEDES = 
+    [
+        "IBÉRICA", 
+        "SUR", 
+        "CIRCUNVALAR", 
+        "FEDERMÁN",
+        "NEW SEDE"
+    ];

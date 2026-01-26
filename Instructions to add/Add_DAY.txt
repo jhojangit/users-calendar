@@ -1,0 +1,53 @@
+Para agregar / eliminar / cambiar un día de la semana
+
+
+1. ir a /src/constants/daysOfWeek.js
+
+    en DAYS_OF_WEEK agrega/elimna/modifica
+
+    export const DAYS_OF_WEEK = [
+        'LUNES',
+        'MARTES',
+        'MIÉRCOLES',
+        'JUEVES',
+        'VIERNES',
+        'SÁBADO',
+        'DOMINGO'
+    ];
+
+2.  En DAYS agrega/elimna/modifica - No debe repetir la inicial y debe ser de exactamente dos carácteres en mayúscula
+
+    export const DAYS = [
+        "LU", 
+        "MA", 
+        "MI", 
+        "JU", 
+        "VI", 
+        "SA",
+        "DO"
+    ];
+
+
+3.  ir a /src/constants/time.js
+
+    En INITIALSTATE agrega/elimna/modifica 
+        - Hacerlo de forma vertical y llenar todas las posiciones.
+        - El formato es DIA/HORA.  Ejemplo Domingo 9am - 10am (DO910)
+        - Las horas deben coincidir con las que se encuentran en TIMESLOTS
+
+
+    export const INITIALSTATE = {
+        LU910:  0, MA910:  0, MI910:  0, JU910:  0, VI910:  0, SA910:  0, DO910:  0,
+        LU1011: 0, MA1011: 0, MI1011: 0, JU1011: 0, VI1011: 0, SA1011: 0, DO1011: 0,
+        LU1112: 0, MA1112: 0, MI1112: 0, JU1112: 0, VI1112: 0, SA1112: 0, DO1112: 0,
+        LU121:  0, MA121:  0, MI121:  0, JU121:  0, VI121:  0, SA121:  0, DO121:  0,
+        LU12:   0, MA12:   0, MI12:   0, JU12:   0, VI12:   0, SA12:   0, DO12:   0,
+        LU23:   0, MA23:   0, MI23:   0, JU23:   0, VI23:   0, SA23:   0, DO23:   0,
+        LU34:   0, MA34:   0, MI34:   0, JU34:   0, VI34:   0, SA34:   0, DO34:   0,
+        LU45:   0, MA45:   0, MI45:   0, JU45:   0, VI45:   0, SA45:   0, DO45:   0,
+        LU56:   0, MA56:   0, MI56:   0, JU56:   0, VI56:   0, SA56:   0, DO56:   0,
+        LU67:   0, MA67:   0, MI67:   0, JU67:   0, VI67:   0, SA67:   0, DO67:   0,
+        LU78:   0, MA78:   0, MI78:   0, JU78:   0, VI78:   0, SA78:   0, DO78:   0,
+        LU89:   0, MA89:   0, MI89:   0, JU89:   0, VI89:   0, SA89:   0, DO89:   0,
+    };
+

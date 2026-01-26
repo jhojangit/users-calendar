@@ -1,0 +1,26 @@
+Para agregar un curso:
+
+1. Ve a la carpeta src / constants / courses.js
+
+2. Agrega un nuevo objeto en ARRAY_OF_COURSES con las mismas propiedades que los otros cursos cambiando los datos:
+
+    { 
+        course: 'new Course', 
+        courseStorageName: "usersNewCourse", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_newCourse.svg",
+        setter: "setUsersDataStoreNewCourse",
+        setterChoise: "setUsersDataChoiseNewCourse",
+        choise: "choiseNewCourse"
+    },
+
+3. Crea en src/store/usersStore.js los métodos de zustand (Todos deben ser idénticos a los que están en courses.js):
+
+        UsersDataStoreNewCourse:          [],
+        choiseNewCourse:                  "",
+        
+        setUsersDataStoreNewCourse   : (data)  => set(() => ({UsersDataStoreNewCourse: data  })),
+        setUsersDataChoiseNewCourse  : (data)  => set(() => ({choiseNewCourse: data          })),
+
+
+4. Agregar png de QR en carpeta public con el mismo nombre que está en courses.js

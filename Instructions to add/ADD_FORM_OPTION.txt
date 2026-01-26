@@ -1,0 +1,245 @@
+Para agregar una nueva opción en el formulario
+
+1. Dirigirse a src/components/FormUser.jsx
+
+2. Crear el div correspondiente y su contenido jsx
+
+3.  Agregar el manejador a un evento onChange / Seguir la estructura (handleInput)
+
+        <div>
+        <label className="text-slate-300 ml-4 font-bold">
+            Semestre
+            <div >
+                <input
+                    type="number"
+                    className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm text-[16px]"
+                    placeholder={semestre}
+                    onChange={handleInputSemestre}
+                />
+            </div>
+        </label>
+    </div>
+
+
+4. Crear el useState - con un condicional en caso de no tener nada la opción. (Esto es para evitar problemas no deseados).
+
+    const [semestre, setSemestre] = useState(1);
+    if (semestre == 0) {
+        setName(1)
+    }
+
+
+
+5.  Dirígete a src/hooks/useFormHandlers.js - Crea el manejador que se encargará de setear la data al useState.
+    Ya está preparado para no tener espacios y guardarse en mayúsculas.
+
+    5.1 Agrega el set del paso 4.
+            const useFormHandlers = ({
+            setName,
+            setSede,
+            setPrograma,
+            setSemestre,
+            setEmail,
+            setTipoDocumento,
+            setIdNumber,
+            setPhoneNumber
+        }) => 
+
+    5.2 Agrega el handle
+
+        const handleInputSemestre = (e) => {
+            setSemestre(e.target.value.trim().toUpperCase())
+        }
+    
+    5.3 Retorna el handle.
+
+        return {
+            handleInputName,
+            handleSelectSede,
+            handleInputPrograma,
+            handleInputSemestre,
+            handleInputEmail,
+            handleSelectId,
+            handleInputId,
+            handlePhoneNumber
+        };
+
+
+6. Regresa a FormUser.jsx - Agrega el handle y el set la destructuración del customHook useFormHandlers
+
+    const {
+        handleInputName,
+        handleSelectSede,
+        handleInputPrograma,
+        handleInputSemestre,
+        handleInputEmail,
+        handleSelectId,
+        handleInputId,
+        handlePhoneNumber
+    } = useFormHandlers({
+        setName,
+        setSede,
+        setPrograma,
+        setSemestre,
+        setEmail,
+        setTipoDocumento,
+        setIdNumber,
+        setPhoneNumber
+    });
+
+
+7. Ir a la función handleConfirm y crear el if, que se encargará de lanzar error en caso de estar vacio.
+
+        if (semestre.length <= 0 || semestre === 0) {
+            error()
+            return
+        }
+
+
+8. Buscar la constante data "const data" y agregar el nombre con el que se guardará el nuevo dato.
+
+        const data = {
+            name,
+            sede,
+            programa,
+            email,
+            tipoDocumento,
+            idNumber,
+            phoneNumber,
+            calendar,
+            curso
+        }
+
+
+9. En la función handleCancel, reinicia el valor del useState()
+
+    const handleCancel = () => {
+        calendar = []
+        setName("")
+        setSede("")
+        setPrograma("")
+        setIdNumber()
+        setPhoneNumber()
+        setSemestre(1)
+
+        navigate("/main")
+    }
+
+
+/////////////////////////////////////////////////////////////////////
+    AHORA HAY QUE HACERLO EN EL COMPONENTE DE ACTUALIZACIÓN
+/////////////////////////////////////////////////////////////////////
+
+
+
+10. Ir a src/components/FormUserUpdate.jsx
+
+
+11. Crea el div correspondiente, asegurandote de llenar como está en el ejemplo (value, onChange, placeholder)
+
+        <div>
+            <label className="text-slate-300 ml-4 font-bold">
+                Semestre
+                <div>
+                    <input
+                        type="text"
+                        className="w-full text-slate-500 font-bold rounded-lg border border-gray-300 p-4 pe-12 text-sm text-[16px]"
+                        value={semestre} 
+                        onChange={handleInputSemestre} 
+                        placeholder={user?.semestre} 
+                    />
+                </div>
+            </label>
+        </div>
+
+
+
+12. Crea el useState, teniendo como estado inicial el valor almacenado.
+
+    const [semestre, setSemestre] = useState(user?.semestre);
+
+
+13. Copia y pega la desestructuración de useFormHandlers que se tiene en FormUser.jsx.
+
+    const {
+        handleInputName,
+        handleSelectSede,
+        handleInputPrograma,
+        handleInputSemestre,
+        handleInputEmail,
+        handleSelectId,
+        handleInputId,
+        handlePhoneNumber
+    } = useFormHandlers({
+        setName,
+        setSede,
+        setPrograma,
+        setSemestre,
+        setEmail,
+        setTipoDocumento,
+        setIdNumber,
+        setPhoneNumber
+    });
+
+
+
+14. En la función handleConfirm crea la condición if para manejar errores.
+
+        if (programa.length <= 0 || programa === 0) {
+            error()
+            return
+        }
+
+
+15. En la constante data (const data) agrega el mismo nombre que se usó en el estado de FormUser.jsx
+
+        const data = {
+            name,
+            sede,
+            programa,
+            email,
+            tipoDocumento,
+            idNumber,
+            phoneNumber,
+            calendar,
+            semestre
+        }
+
+
+16. En la función handleDSoubleActions agrega el mismo nombre que se añadió en const = data de la función handleConfirm 
+    No cambiar (sede:selectedSede)
+
+        const data = {
+            name,
+            sede: selectedSede,
+            programa,
+            email,
+            tipoDocumento,
+            idNumber,
+            phoneNumber,
+            calendar,
+            curso, 
+            semestre
+        };
+
+
+/////////////////////////////////////////////////////////////////////
+    SI SE QUIERE QUE APAREZCA EN LA TABLA DE EXPORTACIÓN
+/////////////////////////////////////////////////////////////////////
+
+
+17. Ir a src/components/ListPrint.jsx 
+
+
+18. En la constante columns agregar el dato / Se debe cambiar "name" y también row.
+
+    const columns = [
+        { name: "Sede", selector: row => row.sede, sortable: true, wrap: true, reorder: true },
+        { name: "Nombre", selector: row => row.name, sortable: true, wrap: true, reorder: true },
+        { name: "Programa", selector: row => row.programa, sortable: true, wrap: true, reorder: true },
+        { name: "Semestre", selector: row => row.semestre, sortable: true, wrap: true, reorder: true },
+        { name: "Correo", selector: row => row.email, sortable: true, wrap: true, reorder: true },
+        { name: "Tipo de documento", selector: row => row.tipoDocumento, sortable: true, wrap: true, reorder: true },
+        { name: "Número de documento", selector: row => row.idNumber, sortable: true, wrap: true, reorder: true },
+        { name: "Número de celular", selector: row => row.phoneNumber, sortable: true, wrap: true, reorder: true },
+    ]

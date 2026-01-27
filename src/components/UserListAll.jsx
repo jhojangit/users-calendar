@@ -126,7 +126,7 @@ const UsersListAll = ({ users, title }) => {
                 </div>
             )}
             {confirmDelete && (
-                <div className='absolute top-20 right-50 text-center bg-slate-700 p-3 rounded-lg'>
+                <div className='absolute z-10 top-20 right-50 text-center bg-slate-700 p-3 rounded-lg'>
                     <p className='text-2xl pb-5'>
                         Confirma que desas borrar todo
                     </p>

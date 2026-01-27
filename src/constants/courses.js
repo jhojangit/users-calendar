@@ -71,6 +71,113 @@ export const ARRAY_OF_COURSES = [
         setterChoise: "setUsersDataChoiseAtletismo",
         choise: "choiseAtletismo"
     },
-
+        { 
+        course: 'Porrismo', 
+        courseStorageName: "usersPorrismo", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStorePorrismo",
+        setterChoise: "setUsersDataChoisePorrismo",
+        choise: "choisePorrismo"
+    },
+        { 
+        course: 'Taekwondo', 
+        courseStorageName: "usersTaekwondo", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreTaekwondo",
+        setterChoise: "setUsersDataChoiseTaekwondo",
+        choise: "choiseTaekwondo"
+    },
+        { 
+        course: 'Tenis de Mesa', 
+        courseStorageName: "usersTenis_de_Mesa", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreTenisMesa",
+        setterChoise: "setUsersDataChoiseTenisMesa",
+        choise: "choiseTenisMesa"
+    },
+        { 
+        course: 'Gym', 
+        courseStorageName: "usersGym", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreGym",
+        setterChoise: "setUsersDataChoiseGym",
+        choise: "choiseGym"
+    },
+        { 
+        course: 'Voleibol', 
+        courseStorageName: "usersVoleibol", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreVoleibol",
+        setterChoise: "setUsersDataChoiseVoleibol",
+        choise: "choiseVoleibol"
+    },
+        { 
+        course: 'Fútbol 11', 
+        courseStorageName: "usersFútbol_11", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreFutbolEleven",
+        setterChoise: "setUsersDataChoiseFutbolEleven",
+        choise: "choiseFutbolEleven"
+    },
+        { 
+        course: 'Baloncesto', 
+        courseStorageName: "usersBaloncesto", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreBaloncesto",
+        setterChoise: "setUsersDataChoiseBaloncesto",
+        choise: "choiseBaloncesto"
+    },
+        { 
+        course: 'Alta Intencidad', 
+        courseStorageName: "usersAlta_Intencidad", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreAltaIntencidad",
+        setterChoise: "setUsersDataChoiseAltaIntencidad",
+        choise: "choiseAltaIntencidad"
+    },
+        { 
+        course: 'Yoga', 
+        courseStorageName: "usersYoga", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreYoga",
+        setterChoise: "setUsersDataChoiseYoga",
+        choise: "choiseYoga"
+    },
+        { 
+        course: 'Fútbol Sala', 
+        courseStorageName: "usersFútbol_Sala", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreFutbolSala",
+        setterChoise: "setUsersDataChoiseFutbolSala",
+        choise: "choiseFutbolSala"
+    },
+        { 
+        course: 'Actividad Físca', 
+        courseStorageName: "usersActividad_Física", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreActividadFisica",
+        setterChoise: "setUsersDataChoiseActividadFisica",
+        choise: "choiseActividadFisica"
+    },
+        { 
+        course: 'Natación', 
+        courseStorageName: "usersNatación", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreNatacion",
+        setterChoise: "setUsersDataChoiseNatacion",
+        choise: "choiseNatacion"
+    },
 
 ];

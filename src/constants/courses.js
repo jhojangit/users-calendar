@@ -99,13 +99,22 @@ export const ARRAY_OF_COURSES = [
         choise: "choiseTenisMesa"
     },
         { 
-        course: 'Gym', 
-        courseStorageName: "usersGym", 
+        course: 'Gym Circunvalar', 
+        courseStorageName: "usersGym_Circunvalar", 
         url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
         qr: "/qr_instruments.svg",
-        setter: "setUsersDataStoreGym",
-        setterChoise: "setUsersDataChoiseGym",
-        choise: "choiseGym"
+        setter: "setUsersDataStoreGymCircunvalar",
+        setterChoise: "setUsersDataChoiseGymCircunvalar",
+        choise: "choiseGymCircunvalar"
+    },
+            { 
+        course: 'Gym Sur', 
+        courseStorageName: "usersGym_Sur", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreGymSur",
+        setterChoise: "setUsersDataChoiseGymSur",
+        choise: "choiseGymSur"
     },
         { 
         course: 'Voleibol', 
@@ -135,13 +144,13 @@ export const ARRAY_OF_COURSES = [
         choise: "choiseBaloncesto"
     },
         { 
-        course: 'Alta Intencidad', 
-        courseStorageName: "usersAlta_Intencidad", 
+        course: 'Alta Intensidad', 
+        courseStorageName: "usersAlta_Intensidad", 
         url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
         qr: "/qr_instruments.svg",
-        setter: "setUsersDataStoreAltaIntencidad",
-        setterChoise: "setUsersDataChoiseAltaIntencidad",
-        choise: "choiseAltaIntencidad"
+        setter: "setUsersDataStoreAltaIntensidad",
+        setterChoise: "setUsersDataChoiseAltaIntensidad",
+        choise: "choiseAltaIntensidad"
     },
         { 
         course: 'Yoga', 

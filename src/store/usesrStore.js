@@ -37,8 +37,11 @@ const useUserStore = create((set) => ({
     UsersDataStoreTenisMesa:       [],
     choiseTenisMesa:               "",
 
-    UsersDataStoreGym:             [],
-    choiseGym:                     "",
+    UsersDataStoreGymCircunvalar:  [],
+    choiseGymCircunvalar:          "",
+
+    UsersDataStoreGymSur:          [],
+    choiseGymSur:                  "",
 
     UsersDataStoreVoleibol:        [],
     choiseVoleibol:                "",
@@ -49,8 +52,8 @@ const useUserStore = create((set) => ({
     UsersDataStoreBaloncesto:      [],
     choiseBaloncesto:              "",
 
-    UsersDataStoreAltaIntencidad:  [],
-    choiseAltaIntencidad:          "",
+    UsersDataStoreAltaIntensidad:  [],
+    choiseAltaIntensidad:          "",
 
     UsersDataStoreYoga:            [],
     choiseYoga:                    "",
@@ -111,8 +114,11 @@ const useUserStore = create((set) => ({
     setUsersDataStoreTenisMesa              : (data)    => set(() => ({UsersDataStoreTenisMesa:       data })),
     setUsersDataChoiseTenisMesa             : (data)    => set(() => ({choiseTenisMesa:               data })),
 
-    setUsersDataStoreGym                    : (data)    => set(() => ({UsersDataStoreGym:             data })),
-    setUsersDataChoiseGym                   : (data)    => set(() => ({choiseGym:                     data })),
+    setUsersDataStoreGymCircunvalar         : (data)    => set(() => ({UsersDataStoreGymCircunvalar:  data })),
+    setUsersDataChoiseGymCircunvalar        : (data)    => set(() => ({choiseGymCircunvalar:          data })),
+
+    setUsersDataStoreGymSur                 : (data)    => set(() => ({UsersDataStoreGymSur:          data })),
+    setUsersDataChoiseGymSur                : (data)    => set(() => ({choiseGymSur:                  data })),
 
     setUsersDataStoreVoleibol               : (data)    => set(() => ({UsersDataStoreVoleibol:        data })),
     setUsersDataChoiseVoleibol              : (data)    => set(() => ({choiseVoleibol:                data })),
@@ -123,8 +129,8 @@ const useUserStore = create((set) => ({
     setUsersDataStoreBaloncesto             : (data)    => set(() => ({UsersDataStoreBaloncesto:      data })),
     setUsersDataChoiseBaloncesto            : (data)    => set(() => ({choiseBaloncesto:              data })),
 
-    setUsersDataStoreAltaIntencidad         : (data)    => set(() => ({UsersDataStoreAltaIntencidad:  data })),
-    setUsersDataChoiseAltaIntencidad        : (data)    => set(() => ({choiseAltaIntencidad:          data })),
+    setUsersDataStoreAltaIntensidad         : (data)    => set(() => ({UsersDataStoreAltaIntensidad:  data })),
+    setUsersDataChoiseAltaIntensidad        : (data)    => set(() => ({choiseAltaIntensidad:          data })),
 
     setUsersDataStoreYoga                   : (data)    => set(() => ({UsersDataStoreYoga:            data })),
     setUsersDataChoiseYoga                  : (data)    => set(() => ({choiseYoga:                    data })),

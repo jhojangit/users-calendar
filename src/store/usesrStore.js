@@ -67,6 +67,9 @@ const useUserStore = create((set) => ({
     UsersDataStoreNatacion:        [],
     choiseNatacion:                "",
 
+    UsersDataStoreRugby:        [],
+    choiseRugby:                "",
+
 
 
     CurrentCourse:               ARRAY_OF_COURSES[0].courseStorageName,
@@ -143,6 +146,9 @@ const useUserStore = create((set) => ({
 
     setUsersDataStoreNatacion               : (data)    => set(() => ({UsersDataStoreNatacion:        data })),
     setUsersDataChoiseNatacion              : (data)    => set(() => ({choiseNatacion:                data })),
+
+    setUsersDataStoreRugby                  : (data)    => set(() => ({UsersDataStoreRugby:           data })),
+    setUsersDataChoiseRugby                 : (data)    => set(() => ({choiseRugby:                   data })),
 
 }))
 

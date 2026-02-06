@@ -188,5 +188,15 @@ export const ARRAY_OF_COURSES = [
         setterChoise: "setUsersDataChoiseNatacion",
         choise: "choiseNatacion"
     },
+        { 
+        course: 'Rugby', 
+        courseStorageName: "usersRugby", 
+        url: "https://service.uan.edu.co/fresa/#bienestar/actividad?id=3160",
+        qr: "/qr_instruments.svg",
+        setter: "setUsersDataStoreRugby",
+        setterChoise: "setUsersDataChoiseRugby",
+        choise: "choiseRugby"
+    },
+
 
 ];
